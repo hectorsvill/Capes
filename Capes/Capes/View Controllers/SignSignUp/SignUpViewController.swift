@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class SignUpViewController: UIViewController {
 
@@ -22,6 +23,13 @@ class SignUpViewController: UIViewController {
     
 	
 	@IBAction func signUpButtonPressed(_ sender: Any) {
+		
+		if let validateString = validateTextFields() {
+			print("Validation Failed with \(validateString)")
+			//show error label.
+			return
+		}
+		
 	}
 	
 	@IBAction func cancelButtonPressed(_ sender: Any) {
@@ -29,10 +37,19 @@ class SignUpViewController: UIViewController {
 		navigationController?.popViewController(animated: true)
 	}
 	
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+	
+	private func validateTextFields() -> String? {
 		
-    }
-
+		if 	firstNameTextField?.text?.trimmingCharacters(in: .whitespaces) == "" ||
+			lastNameTextField?.text?.trimmingCharacters(in: .whitespaces) == "" ||
+			emailTextField?.text?.trimmingCharacters(in: .whitespaces) == "" ||
+			passwordTextField?.text?.trimmingCharacters(in: .whitespaces) == "" {
+			
+			return  "Please feel all text fields."
+		}
+		
+		return nil
+	}
+	
 
 }
