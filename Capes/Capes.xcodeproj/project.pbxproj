@@ -7,15 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04625939D3BEA6AC56968EEF /* Pods_Capes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22D964DF5B5B84943C306192 /* Pods_Capes.framework */; };
 		E8EBE58722EF5D4800B59FD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EBE58622EF5D4800B59FD3 /* AppDelegate.swift */; };
 		E8EBE58922EF5D4800B59FD3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EBE58822EF5D4800B59FD3 /* ViewController.swift */; };
 		E8EBE58C22EF5D4800B59FD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8EBE58A22EF5D4800B59FD3 /* Main.storyboard */; };
 		E8EBE58E22EF5D4A00B59FD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8EBE58D22EF5D4A00B59FD3 /* Assets.xcassets */; };
 		E8EBE59122EF5D4A00B59FD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8EBE58F22EF5D4A00B59FD3 /* LaunchScreen.storyboard */; };
 		E8EBE59922EF5E1F00B59FD3 /* CapesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EBE59822EF5E1F00B59FD3 /* CapesViewController.swift */; };
+		E8EBE5BE22EF8DCD00B59FD3 /* SignUpLogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EBE5BD22EF8DCD00B59FD3 /* SignUpLogInViewController.swift */; };
+		E8EBE5C122EF907300B59FD3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EBE5C022EF907300B59FD3 /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		22D964DF5B5B84943C306192 /* Pods_Capes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Capes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		79FCAFBBC01712076E9175AC /* Pods-Capes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Capes.release.xcconfig"; path = "Target Support Files/Pods-Capes/Pods-Capes.release.xcconfig"; sourceTree = "<group>"; };
+		8B8FAA653E59AD299F9DBBFB /* Pods-Capes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Capes.debug.xcconfig"; path = "Target Support Files/Pods-Capes/Pods-Capes.debug.xcconfig"; sourceTree = "<group>"; };
 		E8EBE58322EF5D4800B59FD3 /* Capes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Capes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8EBE58622EF5D4800B59FD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8EBE58822EF5D4800B59FD3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +30,8 @@
 		E8EBE59022EF5D4A00B59FD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E8EBE59222EF5D4A00B59FD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8EBE59822EF5E1F00B59FD3 /* CapesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapesViewController.swift; sourceTree = "<group>"; };
+		E8EBE5BD22EF8DCD00B59FD3 /* SignUpLogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpLogInViewController.swift; sourceTree = "<group>"; };
+		E8EBE5C022EF907300B59FD3 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +39,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04625939D3BEA6AC56968EEF /* Pods_Capes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E89499E17503558E80962DA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				22D964DF5B5B84943C306192 /* Pods_Capes.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		938FD938295CF39AA20EACC4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8B8FAA653E59AD299F9DBBFB /* Pods-Capes.debug.xcconfig */,
+				79FCAFBBC01712076E9175AC /* Pods-Capes.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		E8EBE57A22EF5D4800B59FD3 = {
 			isa = PBXGroup;
 			children = (
 				E8EBE58522EF5D4800B59FD3 /* Capes */,
 				E8EBE58422EF5D4800B59FD3 /* Products */,
+				938FD938295CF39AA20EACC4 /* Pods */,
+				5E89499E17503558E80962DA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,14 +85,40 @@
 			isa = PBXGroup;
 			children = (
 				E8EBE58622EF5D4800B59FD3 /* AppDelegate.swift */,
+				E8EBE5BC22EF8BED00B59FD3 /* View Controllers */,
+				E8EBE5C222EF90BA00B59FD3 /* Resources */,
+			);
+			path = Capes;
+			sourceTree = "<group>";
+		};
+		E8EBE5BC22EF8BED00B59FD3 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E8EBE5BF22EF903700B59FD3 /* SignSignUp */,
 				E8EBE58822EF5D4800B59FD3 /* ViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		E8EBE5BF22EF903700B59FD3 /* SignSignUp */ = {
+			isa = PBXGroup;
+			children = (
+				E8EBE5BD22EF8DCD00B59FD3 /* SignUpLogInViewController.swift */,
+				E8EBE5C022EF907300B59FD3 /* SignUpViewController.swift */,
+			);
+			path = SignSignUp;
+			sourceTree = "<group>";
+		};
+		E8EBE5C222EF90BA00B59FD3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				E8EBE58A22EF5D4800B59FD3 /* Main.storyboard */,
 				E8EBE58D22EF5D4A00B59FD3 /* Assets.xcassets */,
 				E8EBE58F22EF5D4A00B59FD3 /* LaunchScreen.storyboard */,
 				E8EBE59222EF5D4A00B59FD3 /* Info.plist */,
 				E8EBE59822EF5E1F00B59FD3 /* CapesViewController.swift */,
 			);
-			path = Capes;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,6 +128,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E8EBE59522EF5D4A00B59FD3 /* Build configuration list for PBXNativeTarget "Capes" */;
 			buildPhases = (
+				0387E432348A0351BCFF6142 /* [CP] Check Pods Manifest.lock */,
 				E8EBE57F22EF5D4800B59FD3 /* Sources */,
 				E8EBE58022EF5D4800B59FD3 /* Frameworks */,
 				E8EBE58122EF5D4800B59FD3 /* Resources */,
@@ -133,14 +188,41 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0387E432348A0351BCFF6142 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Capes-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E8EBE57F22EF5D4800B59FD3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8EBE5BE22EF8DCD00B59FD3 /* SignUpLogInViewController.swift in Sources */,
 				E8EBE58922EF5D4800B59FD3 /* ViewController.swift in Sources */,
 				E8EBE58722EF5D4800B59FD3 /* AppDelegate.swift in Sources */,
 				E8EBE59922EF5E1F00B59FD3 /* CapesViewController.swift in Sources */,
+				E8EBE5C122EF907300B59FD3 /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,11 +366,12 @@
 		};
 		E8EBE59622EF5D4A00B59FD3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B8FAA653E59AD299F9DBBFB /* Pods-Capes.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 97AS6JS382;
-				INFOPLIST_FILE = Capes/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Capes/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,11 +385,12 @@
 		};
 		E8EBE59722EF5D4A00B59FD3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79FCAFBBC01712076E9175AC /* Pods-Capes.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 97AS6JS382;
-				INFOPLIST_FILE = Capes/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Capes/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
