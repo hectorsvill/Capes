@@ -16,6 +16,7 @@
 		E8EBE59922EF5E1F00B59FD3 /* CapesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EBE59822EF5E1F00B59FD3 /* CapesViewController.swift */; };
 		E8EBE5BE22EF8DCD00B59FD3 /* SignUpLogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EBE5BD22EF8DCD00B59FD3 /* SignUpLogInViewController.swift */; };
 		E8EBE5C122EF907300B59FD3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EBE5C022EF907300B59FD3 /* SignUpViewController.swift */; };
+		E8EBE5C422EF94BF00B59FD3 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EBE5C322EF94BF00B59FD3 /* LogInViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		E8EBE59822EF5E1F00B59FD3 /* CapesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapesViewController.swift; sourceTree = "<group>"; };
 		E8EBE5BD22EF8DCD00B59FD3 /* SignUpLogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpLogInViewController.swift; sourceTree = "<group>"; };
 		E8EBE5C022EF907300B59FD3 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		E8EBE5C322EF94BF00B59FD3 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 			children = (
 				E8EBE5BD22EF8DCD00B59FD3 /* SignUpLogInViewController.swift */,
 				E8EBE5C022EF907300B59FD3 /* SignUpViewController.swift */,
+				E8EBE5C322EF94BF00B59FD3 /* LogInViewController.swift */,
 			);
 			path = SignSignUp;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 			files = (
 				E8EBE5BE22EF8DCD00B59FD3 /* SignUpLogInViewController.swift in Sources */,
 				E8EBE58922EF5D4800B59FD3 /* ViewController.swift in Sources */,
+				E8EBE5C422EF94BF00B59FD3 /* LogInViewController.swift in Sources */,
 				E8EBE58722EF5D4800B59FD3 /* AppDelegate.swift in Sources */,
 				E8EBE59922EF5E1F00B59FD3 /* CapesViewController.swift in Sources */,
 				E8EBE5C122EF907300B59FD3 /* SignUpViewController.swift in Sources */,

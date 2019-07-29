@@ -1,5 +1,5 @@
 //
-//  SignUpViewController.swift
+//  LogInViewController.swift
 //  Capes
 //
 //  Created by Hector Steven on 7/29/19.
@@ -8,29 +8,31 @@
 
 import UIKit
 
-class SignUpViewController: UIViewController {
+class LogInViewController: UIViewController {
 
 	
-	@IBOutlet var firstNameTextField: UITextField!
-	@IBOutlet var lastNameTextField: UITextField!
-	@IBOutlet var emailTextField: UITextField!
+	@IBOutlet var logInTextField: UITextField!
+	
 	@IBOutlet var passwordTextField: UITextField!
+	
 	
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
     }
     
-	
-	@IBAction func signUpButtonPressed(_ sender: Any) {
+	@IBAction func logInButtonPressed(_ sender: UIButton) {
+		
 	}
 	
-	@IBAction func cancelButtonPressed(_ sender: Any) {
-		
+	
+	@IBAction func cancelButtonPressed(_ sender: UIButton) {
 		navigationController?.popViewController(animated: true)
+	
 	}
 	
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
 		
     }
 

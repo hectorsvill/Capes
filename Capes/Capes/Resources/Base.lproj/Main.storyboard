@@ -120,20 +120,64 @@
             </objects>
             <point key="canvasLocation" x="210.1449275362319" y="-1831.4732142857142"/>
         </scene>
-        <!--View Controller-->
+        <!--Log In View Controller-->
         <scene sceneID="JJV-j7-BKE">
             <objects>
-                <viewController id="Pnt-lE-I2Z" sceneMemberID="viewController">
+                <viewController id="Pnt-lE-I2Z" customClass="LogInViewController" customModule="Capes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6Ib-uH-oKX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="S7w-aN-XeH">
+                                <rect key="frame" x="20" y="64" width="374" height="180"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3kU-eK-kAH">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ziP-Zi-yWY">
+                                        <rect key="frame" x="0.0" y="50" width="374" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NGt-pO-Pc8">
+                                        <rect key="frame" x="0.0" y="100" width="374" height="30"/>
+                                        <state key="normal" title="Login"/>
+                                        <connections>
+                                            <action selector="logInButtonPressed:" destination="Pnt-lE-I2Z" eventType="touchUpInside" id="Ye1-8B-Ibx"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XBz-Ld-t5E">
+                                        <rect key="frame" x="0.0" y="150" width="374" height="30"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancelButtonPressed:" destination="Pnt-lE-I2Z" eventType="touchUpInside" id="338-Re-iAL"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="c2r-O1-aaT" firstAttribute="trailing" secondItem="S7w-aN-XeH" secondAttribute="trailing" constant="20" id="Dua-MW-39p"/>
+                            <constraint firstItem="S7w-aN-XeH" firstAttribute="leading" secondItem="c2r-O1-aaT" secondAttribute="leading" constant="20" id="RZW-dj-mbQ"/>
+                            <constraint firstItem="S7w-aN-XeH" firstAttribute="top" secondItem="c2r-O1-aaT" secondAttribute="top" constant="20" id="uuD-MV-zPM"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="c2r-O1-aaT"/>
                     </view>
+                    <connections>
+                        <outlet property="logInTextField" destination="3kU-eK-kAH" id="4hh-2n-jYG"/>
+                        <outlet property="passwordTextField" destination="ziP-Zi-yWY" id="0Qw-Ek-hUI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yeI-eE-cBM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1064" y="-1408"/>
+            <point key="canvasLocation" x="1063.768115942029" y="-1408.2589285714284"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="ibl-lh-EXP">
