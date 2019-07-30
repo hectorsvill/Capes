@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FirebaseAuth
+import Firebase
 
 class LogInViewController: UIViewController {
 
@@ -24,12 +26,19 @@ class LogInViewController: UIViewController {
 	@IBAction func logInButtonPressed(_ sender: UIButton) {
 		guard let email = emailTextField?.text?.trimmingCharacters(in: .whitespaces),
 			let password = passwordTextField?.text?.trimmingCharacters(in: .whitespaces) else {
+			self.errorLabel.isHidden = false
 			self.errorLabel.text =  "Please feel in all the text fields."
 			return
 		}
 		
-		//log in with firebase
-		
+		Auth.auth().signIn(withEmail: email, password: password) { (_, error) in
+			if let error = error {
+				print("Error wotj fb signIn: \(error)")
+			}
+			self.goToMainView()
+			
+		}
+	
 		
 		// push to main tab controller 
 		
@@ -37,15 +46,21 @@ class LogInViewController: UIViewController {
 		
 	}
 	
-	
 	@IBAction func cancelButtonPressed(_ sender: UIButton) {
 		navigationController?.popViewController(animated: true)
 	
 	}
-	
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+	private func goToMainView() {
+		guard let homeVC = storyboard?.instantiateViewController(withIdentifier: "HomeVC") as? CapesViewController else {
+			
+			print("homeVC was not found!")
+			return
+		}
 		
-    }
-
-
+		view.window?.rootViewController = homeVC
+		view.window?.makeKeyAndVisible()
+		
+	}
+	
 }

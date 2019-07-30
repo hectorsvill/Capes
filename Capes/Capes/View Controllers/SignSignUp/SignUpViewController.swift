@@ -48,7 +48,8 @@ class SignUpViewController: UIViewController {
 			} else {
 				// send user data
 				let db = Firestore.firestore()
-				db.collection("users").addDocument(data: ["firstname": firstname, "lastname": lastname, "address": "", "phonenumber": "", "uid": result?.user.uid]){ error in
+				
+				db.collection("users").addDocument(data: ["firstname": firstname, "lastname": lastname, "address": "", "phonenumber": "", "uid": result!.user.uid]){ error in
 					if let error = error {
 						print("Error with firestore: \(error)")
 						return
