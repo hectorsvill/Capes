@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		04625939D3BEA6AC56968EEF /* Pods_Capes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22D964DF5B5B84943C306192 /* Pods_Capes.framework */; };
+		E8A05D0E22F023DA00B19C3D /* CapesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A05D0D22F023DA00B19C3D /* CapesController.swift */; };
 		E8EBE58722EF5D4800B59FD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EBE58622EF5D4800B59FD3 /* AppDelegate.swift */; };
 		E8EBE58922EF5D4800B59FD3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EBE58822EF5D4800B59FD3 /* ViewController.swift */; };
 		E8EBE58C22EF5D4800B59FD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8EBE58A22EF5D4800B59FD3 /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 		22D964DF5B5B84943C306192 /* Pods_Capes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Capes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79FCAFBBC01712076E9175AC /* Pods-Capes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Capes.release.xcconfig"; path = "Target Support Files/Pods-Capes/Pods-Capes.release.xcconfig"; sourceTree = "<group>"; };
 		8B8FAA653E59AD299F9DBBFB /* Pods-Capes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Capes.debug.xcconfig"; path = "Target Support Files/Pods-Capes/Pods-Capes.debug.xcconfig"; sourceTree = "<group>"; };
+		E8A05D0D22F023DA00B19C3D /* CapesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CapesController.swift; path = ../CapesController.swift; sourceTree = "<group>"; };
 		E8EBE58322EF5D4800B59FD3 /* Capes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Capes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8EBE58622EF5D4800B59FD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8EBE58822EF5D4800B59FD3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +69,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		E8A05D0F22F023E500B19C3D /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E8A05D0D22F023DA00B19C3D /* CapesController.swift */,
+			);
+			path = "Model Controller";
+			sourceTree = "<group>";
+		};
 		E8EBE57A22EF5D4800B59FD3 = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				E8EBE58622EF5D4800B59FD3 /* AppDelegate.swift */,
+				E8A05D0F22F023E500B19C3D /* Model Controller */,
 				E8EBE5BC22EF8BED00B59FD3 /* View Controllers */,
 				E8EBE5C222EF90BA00B59FD3 /* Resources */,
 			);
@@ -266,6 +277,7 @@
 				E8EBE58922EF5D4800B59FD3 /* ViewController.swift in Sources */,
 				E8EBE5C422EF94BF00B59FD3 /* LogInViewController.swift in Sources */,
 				E8EBE58722EF5D4800B59FD3 /* AppDelegate.swift in Sources */,
+				E8A05D0E22F023DA00B19C3D /* CapesController.swift in Sources */,
 				E8EBE59922EF5E1F00B59FD3 /* CapesViewController.swift in Sources */,
 				E8EBE5C122EF907300B59FD3 /* SignUpViewController.swift in Sources */,
 			);

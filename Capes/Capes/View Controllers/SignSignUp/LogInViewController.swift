@@ -12,7 +12,6 @@ import Firebase
 
 class LogInViewController: UIViewController {
 
-	
 	@IBOutlet var emailTextField: UITextField!
 	@IBOutlet var passwordTextField: UITextField!
 	@IBOutlet var errorLabel: UILabel!
@@ -36,19 +35,11 @@ class LogInViewController: UIViewController {
 				print("Error with fb signIn: \(error)")
 			}
 			self.goToMainView()
-			
 		}
-	
-		
-		// push to main tab controller 
-		
-		
-		
 	}
 	
 	@IBAction func cancelButtonPressed(_ sender: UIButton) {
 		navigationController?.popViewController(animated: true)
-	
 	}
 
 	private func goToMainView() {
@@ -59,7 +50,6 @@ class LogInViewController: UIViewController {
 		
 		view.window?.rootViewController = homeVC
 		view.window?.makeKeyAndVisible()
-		
 	}
 	
 }

@@ -26,6 +26,7 @@ class SignUpLogInViewController: UIViewController {
 			print("no user data")
 			return
 		}
+		
 		Auth.auth().signIn(withEmail: email, password: password) { (_, error) in
 			if let error = error {
 				print("Error with fb signIn: \(error)")
@@ -33,7 +34,6 @@ class SignUpLogInViewController: UIViewController {
 			self.goToMainView()
 			
 		}
-		
 	}
 	
 	

@@ -12,7 +12,6 @@ import Firebase
 
 class SignUpViewController: UIViewController {
 
-	
 	@IBOutlet var firstNameTextField: UITextField!
 	@IBOutlet var lastNameTextField: UITextField!
 	@IBOutlet var emailTextField: UITextField!
@@ -39,8 +38,7 @@ class SignUpViewController: UIViewController {
 			let email = emailTextField.text?.trimmingCharacters(in: .whitespaces),
 			let password = passwordTextField.text?.trimmingCharacters(in: .whitespaces) else { return }
 		
-			createUser(with: firstname, lastname: lastname, email: email, password: password)
-	
+		createUser(with: firstname, lastname: lastname, email: email, password: password)
 	}
 	
 	@IBAction func cancelButtonPressed(_ sender: Any) {
