@@ -10,22 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
-        <scene sceneID="6OW-PP-Wjd">
-            <objects>
-                <viewController id="9C2-h2-w7r" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="zfa-gy-8fz">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="coZ-05-hpr"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="GIT-od-0zR"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dnn-P3-Goy" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-699" y="84"/>
-        </scene>
         <!--Item 1-->
         <scene sceneID="Izf-BT-nZg">
             <objects>
@@ -40,7 +24,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cg3-18-vfC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="130" y="137"/>
+            <point key="canvasLocation" x="-857" y="11"/>
         </scene>
         <!--Item-->
         <scene sceneID="g3n-Ge-aSB">
@@ -129,7 +113,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="S7w-aN-XeH">
-                                <rect key="frame" x="20" y="64" width="374" height="180"/>
+                                <rect key="frame" x="20" y="64" width="374" height="220.5"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3kU-eK-kAH">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
@@ -159,6 +143,12 @@
                                             <action selector="cancelButtonPressed:" destination="Pnt-lE-I2Z" eventType="touchUpInside" id="338-Re-iAL"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nus-eo-jeO">
+                                        <rect key="frame" x="0.0" y="200" width="374" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -171,6 +161,7 @@
                         <viewLayoutGuide key="safeArea" id="c2r-O1-aaT"/>
                     </view>
                     <connections>
+                        <outlet property="errorLabel" destination="nus-eo-jeO" id="23K-Dd-l3r"/>
                         <outlet property="logInTextField" destination="3kU-eK-kAH" id="4hh-2n-jYG"/>
                         <outlet property="passwordTextField" destination="ziP-Zi-yWY" id="0Qw-Ek-hUI"/>
                     </connections>
@@ -188,7 +179,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="JAP-Yb-J5T">
-                                <rect key="frame" x="20" y="64" width="374" height="280"/>
+                                <rect key="frame" x="20" y="64" width="374" height="320.5"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="first name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O4p-12-IJa">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
@@ -230,6 +221,12 @@
                                             <action selector="cancelButtonPressed:" destination="Urg-JJ-ele" eventType="touchUpInside" id="Emb-Eq-O1P"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7T6-mZ-Y28">
+                                        <rect key="frame" x="0.0" y="300" width="374" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -243,6 +240,7 @@
                     </view>
                     <connections>
                         <outlet property="emailTextField" destination="hQx-KP-a7R" id="aGT-vd-9XR"/>
+                        <outlet property="errorLabel" destination="7T6-mZ-Y28" id="pOc-tX-2Nj"/>
                         <outlet property="firstNameTextField" destination="O4p-12-IJa" id="TuT-pT-PmV"/>
                         <outlet property="lastNameTextField" destination="6QJ-FL-wTf" id="CkD-ls-NKp"/>
                         <outlet property="passwordTextField" destination="JgR-I4-Fed" id="N3c-Ld-HtW"/>
@@ -263,7 +261,6 @@
                     </tabBar>
                     <connections>
                         <segue destination="U9F-k4-lYK" kind="relationship" relationship="viewControllers" id="cJ1-WN-P2Y"/>
-                        <segue destination="9C2-h2-w7r" kind="relationship" relationship="viewControllers" id="q9d-TP-GUL"/>
                         <segue destination="fwh-4j-SXy" kind="relationship" relationship="viewControllers" id="xL2-W8-mJ6"/>
                         <segue destination="Lwh-qU-Wni" kind="relationship" relationship="viewControllers" id="IJF-Po-Iv2"/>
                     </connections>

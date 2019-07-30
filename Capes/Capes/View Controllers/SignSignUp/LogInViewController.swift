@@ -12,14 +12,13 @@ class LogInViewController: UIViewController {
 
 	
 	@IBOutlet var logInTextField: UITextField!
-	
 	@IBOutlet var passwordTextField: UITextField!
-	
+	@IBOutlet var errorLabel: UILabel!
 	
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        errorLabel?.isHidden = true
     }
     
 	@IBAction func logInButtonPressed(_ sender: UIButton) {
