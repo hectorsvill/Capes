@@ -21,6 +21,7 @@
 		E8F2640D22F0B8600074C4C3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E8F2640C22F0B8600074C4C3 /* GoogleService-Info.plist */; };
 		E8F2640F22F0BC8C0074C4C3 /* WorkspaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F2640E22F0BC8C0074C4C3 /* WorkspaceTableViewCell.swift */; };
 		E8F2641122F0CFEE0074C4C3 /* WorkSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F2641022F0CFED0074C4C3 /* WorkSpace.swift */; };
+		E8F2641422F0E3F10074C4C3 /* FireStoreReferenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F2641322F0E3F10074C4C3 /* FireStoreReferenceManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		E8F2640C22F0B8600074C4C3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E8F2640E22F0BC8C0074C4C3 /* WorkspaceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceTableViewCell.swift; sourceTree = "<group>"; };
 		E8F2641022F0CFED0074C4C3 /* WorkSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkSpace.swift; sourceTree = "<group>"; };
+		E8F2641322F0E3F10074C4C3 /* FireStoreReferenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireStoreReferenceManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				E8A05D0D22F023DA00B19C3D /* CapesController.swift */,
+				E8F2641322F0E3F10074C4C3 /* FireStoreReferenceManager.swift */,
 			);
 			path = "Model Controller";
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 				E8EBE59922EF5E1F00B59FD3 /* CapesViewController.swift in Sources */,
 				E8EBE5C122EF907300B59FD3 /* SignUpViewController.swift in Sources */,
 				E8F2641122F0CFEE0074C4C3 /* WorkSpace.swift in Sources */,
+				E8F2641422F0E3F10074C4C3 /* FireStoreReferenceManager.swift in Sources */,
 				E8F2640F22F0BC8C0074C4C3 /* WorkspaceTableViewCell.swift in Sources */,
 				E8F2640A22F0B6A30074C4C3 /* WorkSpacesTableViewController.swift in Sources */,
 			);
