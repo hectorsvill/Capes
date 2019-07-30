@@ -11,7 +11,7 @@ import UIKit
 class LogInViewController: UIViewController {
 
 	
-	@IBOutlet var logInTextField: UITextField!
+	@IBOutlet var emailTextField: UITextField!
 	@IBOutlet var passwordTextField: UITextField!
 	@IBOutlet var errorLabel: UILabel!
 	
@@ -22,6 +22,18 @@ class LogInViewController: UIViewController {
     }
     
 	@IBAction func logInButtonPressed(_ sender: UIButton) {
+		guard let email = emailTextField?.text?.trimmingCharacters(in: .whitespaces) == "" ||
+			let password = passwordTextField?.text?.trimmingCharacters(in: .whitespaces) == "" else {
+			errorLabel.text =  "Please feel in all the text fields."
+			return
+		}
+		
+		//log in with firebase
+		
+		
+		// push to main tab controller 
+		
+		
 		
 	}
 	

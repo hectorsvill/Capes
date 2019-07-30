@@ -32,12 +32,12 @@ class SignUpViewController: UIViewController {
 			return
 		}
 		
-		guard let firstName = firstNameTextField.text,
-			let lastName = lastNameTextField.text,
-			let email = emailTextField.text,
-			let password = passwordTextField.text else { return }
+		guard let firstName = firstNameTextField.text?.trimmingCharacters(in: .whitespaces),
+			let lastName = lastNameTextField.text?.trimmingCharacters(in: .whitespaces),
+			let email = emailTextField.text?.trimmingCharacters(in: .whitespaces),
+			let password = passwordTextField.text?.trimmingCharacters(in: .whitespaces) else { return }
 		
-		Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
+		Auth.auth().createUser(withEmail: "", password: "") { (result, error) in
 			if let error = error{
 				print("error with fb Auth: \(error)")
 				self.errorLabel?.text = "Error accurred. Please try again."
@@ -45,12 +45,13 @@ class SignUpViewController: UIViewController {
 			}
 		
 			
-			
-			
-			
 		}
 		
+		//log in with firebase
 		
+		let db = Firestore.firestore()
+		
+		// push to main tab controller
 		
 	}
 	
