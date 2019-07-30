@@ -9,11 +9,5 @@
 import UIKit
 
 class CapeController {
-	
-	
-	
-	
-	
-
 }
 

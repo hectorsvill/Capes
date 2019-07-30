@@ -10,7 +10,6 @@
 		04625939D3BEA6AC56968EEF /* Pods_Capes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22D964DF5B5B84943C306192 /* Pods_Capes.framework */; };
 		E8A05D0E22F023DA00B19C3D /* CapesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A05D0D22F023DA00B19C3D /* CapesController.swift */; };
 		E8EBE58722EF5D4800B59FD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EBE58622EF5D4800B59FD3 /* AppDelegate.swift */; };
-		E8EBE58922EF5D4800B59FD3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EBE58822EF5D4800B59FD3 /* ViewController.swift */; };
 		E8EBE58C22EF5D4800B59FD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8EBE58A22EF5D4800B59FD3 /* Main.storyboard */; };
 		E8EBE58E22EF5D4A00B59FD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8EBE58D22EF5D4A00B59FD3 /* Assets.xcassets */; };
 		E8EBE59122EF5D4A00B59FD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8EBE58F22EF5D4A00B59FD3 /* LaunchScreen.storyboard */; };
@@ -28,10 +27,9 @@
 		22D964DF5B5B84943C306192 /* Pods_Capes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Capes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79FCAFBBC01712076E9175AC /* Pods-Capes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Capes.release.xcconfig"; path = "Target Support Files/Pods-Capes/Pods-Capes.release.xcconfig"; sourceTree = "<group>"; };
 		8B8FAA653E59AD299F9DBBFB /* Pods-Capes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Capes.debug.xcconfig"; path = "Target Support Files/Pods-Capes/Pods-Capes.debug.xcconfig"; sourceTree = "<group>"; };
-		E8A05D0D22F023DA00B19C3D /* CapesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CapesController.swift; path = ../CapesController.swift; sourceTree = "<group>"; };
+		E8A05D0D22F023DA00B19C3D /* CapesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapesController.swift; sourceTree = "<group>"; };
 		E8EBE58322EF5D4800B59FD3 /* Capes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Capes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8EBE58622EF5D4800B59FD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E8EBE58822EF5D4800B59FD3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E8EBE58B22EF5D4800B59FD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E8EBE58D22EF5D4A00B59FD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E8EBE59022EF5D4A00B59FD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -43,7 +41,7 @@
 		E8F2640922F0B6A30074C4C3 /* WorkSpacesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WorkSpacesTableViewController.swift; path = ../WorkSpacesTableViewController.swift; sourceTree = "<group>"; };
 		E8F2640C22F0B8600074C4C3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E8F2640E22F0BC8C0074C4C3 /* WorkspaceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceTableViewCell.swift; sourceTree = "<group>"; };
-		E8F2641022F0CFED0074C4C3 /* WorkSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WorkSpace.swift; path = ../WorkSpace.swift; sourceTree = "<group>"; };
+		E8F2641022F0CFED0074C4C3 /* WorkSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkSpace.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +115,6 @@
 			isa = PBXGroup;
 			children = (
 				E8EBE59822EF5E1F00B59FD3 /* CapesViewController.swift */,
-				E8EBE58822EF5D4800B59FD3 /* ViewController.swift */,
 				E8EBE5BF22EF903700B59FD3 /* SignSignUp */,
 				E8F2640B22F0B7780074C4C3 /* Nav View Controllers */,
 			);
@@ -299,7 +296,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8EBE5BE22EF8DCD00B59FD3 /* SignUpLogInViewController.swift in Sources */,
-				E8EBE58922EF5D4800B59FD3 /* ViewController.swift in Sources */,
 				E8EBE5C422EF94BF00B59FD3 /* LogInViewController.swift in Sources */,
 				E8EBE58722EF5D4800B59FD3 /* AppDelegate.swift in Sources */,
 				E8A05D0E22F023DA00B19C3D /* CapesController.swift in Sources */,
