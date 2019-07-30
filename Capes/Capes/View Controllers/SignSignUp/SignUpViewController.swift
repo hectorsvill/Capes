@@ -49,7 +49,7 @@ class SignUpViewController: UIViewController {
 		
 		//log in with firebase
 		
-		let db = Firestore.firestore()
+//		let db = Firestore.firestore()
 		
 		// push to main tab controller
 		

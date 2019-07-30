@@ -22,9 +22,9 @@ class LogInViewController: UIViewController {
     }
     
 	@IBAction func logInButtonPressed(_ sender: UIButton) {
-		guard let email = emailTextField?.text?.trimmingCharacters(in: .whitespaces) == "" ||
-			let password = passwordTextField?.text?.trimmingCharacters(in: .whitespaces) == "" else {
-			errorLabel.text =  "Please feel in all the text fields."
+		guard let email = emailTextField?.text?.trimmingCharacters(in: .whitespaces),
+			let password = passwordTextField?.text?.trimmingCharacters(in: .whitespaces) else {
+			self.errorLabel.text =  "Please feel in all the text fields."
 			return
 		}
 		
