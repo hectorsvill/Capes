@@ -39,37 +39,8 @@ class SignUpViewController: UIViewController {
 			let email = emailTextField.text?.trimmingCharacters(in: .whitespaces),
 			let password = passwordTextField.text?.trimmingCharacters(in: .whitespaces) else { return }
 		
-		Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
-			if let error = error{
-				print("error with fb Auth: \(error)")
-				self.errorLabel.isHidden = false
-				self.errorLabel?.text = "Error accurred. Please try again."
-				return
-			} else {
-				// send user data
-				let db = Firestore.firestore()
-				
-				db.collection("users").addDocument(data: ["firstname": firstname, "lastname": lastname, "address": "", "phonenumber": "", "uid": result!.user.uid]){ error in
-					if let error = error {
-						print("Error with firestore: \(error)")
-						return
-					}
-					DispatchQueue.main.async {
-						self.goToMainView()						
-					}
-					
-					
-				}
-			}
-		
-			
-		}
-		
-		//log in with firebase
-		
-		
-		// push to main tab controller
-		
+			createUser(with: firstname, lastname: lastname, email: email, password: password)
+	
 	}
 	
 	@IBAction func cancelButtonPressed(_ sender: Any) {
@@ -98,14 +69,41 @@ class SignUpViewController: UIViewController {
 	
 	private func goToMainView() {
 		guard let homeVC = storyboard?.instantiateViewController(withIdentifier: "HomeVC") as? CapesViewController else {
-			
 			print("homeVC was not found!")
 			return
 		}
-		
 		view.window?.rootViewController = homeVC
 		view.window?.makeKeyAndVisible()
-		
 	}
+	
+	private func createUser(with firstname:String, lastname: String, email: String, password: String) {
+		Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
+			if let error = error{
+				print("error with fb Auth: \(error)")
+				self.errorLabel.isHidden = false
+				self.errorLabel?.text = "Error accurred. Please try again."
+				
+				return
+			} else {
+				Firestore.firestore().collection("users").addDocument(data: ["firstname": firstname, "lastname": lastname, "address": "", "phonenumber": "", "uid": result!.user.uid]){ error in
+					if let error = error {
+						print("Error with firestore: \(error)")
+						return
+					}
+					self.goToMainView()
+					self.saveToUserDefaults(with: email, password: password)
+				}
+			}
+		}
+	}
+	
+	
+	private func saveToUserDefaults(with email: String, password: String) {
+		let userDefaults = UserDefaults.standard
+		
+		userDefaults.set(email, forKey: "email")
+		userDefaults.set(password, forKey: "password")
+	}
+	
 
 }

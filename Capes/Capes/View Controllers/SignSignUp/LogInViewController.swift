@@ -33,7 +33,7 @@ class LogInViewController: UIViewController {
 		
 		Auth.auth().signIn(withEmail: email, password: password) { (_, error) in
 			if let error = error {
-				print("Error wotj fb signIn: \(error)")
+				print("Error with fb signIn: \(error)")
 			}
 			self.goToMainView()
 			
@@ -53,7 +53,6 @@ class LogInViewController: UIViewController {
 
 	private func goToMainView() {
 		guard let homeVC = storyboard?.instantiateViewController(withIdentifier: "HomeVC") as? CapesViewController else {
-			
 			print("homeVC was not found!")
 			return
 		}

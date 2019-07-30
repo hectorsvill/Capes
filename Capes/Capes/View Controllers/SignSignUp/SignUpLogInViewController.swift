@@ -7,31 +7,42 @@
 //
 
 import UIKit
+import FirebaseAuth
+import Firebase
 
 class SignUpLogInViewController: UIViewController {
 
-	
-	
-	
-	
-	
-	
-	
 	override func viewDidLoad() {
         super.viewDidLoad()
-
-        
+		checkUserLoginStatus()
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+	
+	private func checkUserLoginStatus() {
+		let defaults = UserDefaults.standard
+		
+		guard let email = defaults.string(forKey: "email"),
+			let password = defaults.string(forKey: "password") else {
+			
+			print("no user data")
+			return
+		}
+		Auth.auth().signIn(withEmail: email, password: password) { (_, error) in
+			if let error = error {
+				print("Error with fb signIn: \(error)")
+			}
+			self.goToMainView()
+			
+		}
+		
+	}
+	
+	
+	private func goToMainView() {
+		guard let homeVC = storyboard?.instantiateViewController(withIdentifier: "HomeVC") as? CapesViewController else {
+			print("homeVC was not found!")
+			return
+		}
+		view.window?.rootViewController = homeVC
+		view.window?.makeKeyAndVisible()
+	}
 }
