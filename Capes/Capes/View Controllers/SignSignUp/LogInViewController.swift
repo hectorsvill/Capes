@@ -20,6 +20,7 @@ class LogInViewController: UIViewController {
         super.viewDidLoad()
 
         errorLabel?.isHidden = true
+		checkUserLoginStatus()
     }
     
 	@IBAction func logInButtonPressed(_ sender: UIButton) {
@@ -50,6 +51,26 @@ class LogInViewController: UIViewController {
 		
 		view.window?.rootViewController = homeVC
 		view.window?.makeKeyAndVisible()
+	}
+	
+	private func checkUserLoginStatus() {
+		let defaults = UserDefaults.standard
+		
+		guard let email = defaults.string(forKey: "email"),
+			let password = defaults.string(forKey: "password") else {
+				print("no user data")
+				return
+		}
+		
+		emailTextField.text = email
+		passwordTextField.text = password
+		
+		Auth.auth().signIn(withEmail: email, password: password) { (_, error) in
+			if let error = error {
+				print("Error with fb signIn: \(error)")
+			}
+			self.goToMainView()
+		}
 	}
 	
 }

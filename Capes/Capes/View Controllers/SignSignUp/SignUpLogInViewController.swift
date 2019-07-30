@@ -14,27 +14,10 @@ class SignUpLogInViewController: UIViewController {
 
 	override func viewDidLoad() {
         super.viewDidLoad()
-		checkUserLoginStatus()
+//		checkUserLoginStatus()
     }
 	
-	private func checkUserLoginStatus() {
-		let defaults = UserDefaults.standard
-		
-		guard let email = defaults.string(forKey: "email"),
-			let password = defaults.string(forKey: "password") else {
-			
-			print("no user data")
-			return
-		}
-		
-		Auth.auth().signIn(withEmail: email, password: password) { (_, error) in
-			if let error = error {
-				print("Error with fb signIn: \(error)")
-			}
-			self.goToMainView()
-			
-		}
-	}
+	
 	
 	
 	private func goToMainView() {
