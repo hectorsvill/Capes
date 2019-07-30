@@ -18,8 +18,8 @@
 		E8EBE5BE22EF8DCD00B59FD3 /* SignUpLogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EBE5BD22EF8DCD00B59FD3 /* SignUpLogInViewController.swift */; };
 		E8EBE5C122EF907300B59FD3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EBE5C022EF907300B59FD3 /* SignUpViewController.swift */; };
 		E8EBE5C422EF94BF00B59FD3 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EBE5C322EF94BF00B59FD3 /* LogInViewController.swift */; };
-		E8EBE5C622EF99B900B59FD3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E8EBE5C522EF99B900B59FD3 /* GoogleService-Info.plist */; };
 		E8F2640A22F0B6A30074C4C3 /* WorkSpacesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F2640922F0B6A30074C4C3 /* WorkSpacesTableViewController.swift */; };
+		E8F2640D22F0B8600074C4C3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E8F2640C22F0B8600074C4C3 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,8 +38,8 @@
 		E8EBE5BD22EF8DCD00B59FD3 /* SignUpLogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpLogInViewController.swift; sourceTree = "<group>"; };
 		E8EBE5C022EF907300B59FD3 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		E8EBE5C322EF94BF00B59FD3 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
-		E8EBE5C522EF99B900B59FD3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E8F2640922F0B6A30074C4C3 /* WorkSpacesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WorkSpacesTableViewController.swift; path = ../WorkSpacesTableViewController.swift; sourceTree = "<group>"; };
+		E8F2640C22F0B8600074C4C3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,7 +136,7 @@
 				E8EBE58D22EF5D4A00B59FD3 /* Assets.xcassets */,
 				E8EBE58F22EF5D4A00B59FD3 /* LaunchScreen.storyboard */,
 				E8EBE59222EF5D4A00B59FD3 /* Info.plist */,
-				E8EBE5C522EF99B900B59FD3 /* GoogleService-Info.plist */,
+				E8F2640C22F0B8600074C4C3 /* GoogleService-Info.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -210,7 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8EBE59122EF5D4A00B59FD3 /* LaunchScreen.storyboard in Resources */,
-				E8EBE5C622EF99B900B59FD3 /* GoogleService-Info.plist in Resources */,
+				E8F2640D22F0B8600074C4C3 /* GoogleService-Info.plist in Resources */,
 				E8EBE58E22EF5D4A00B59FD3 /* Assets.xcassets in Resources */,
 				E8EBE58C22EF5D4800B59FD3 /* Main.storyboard in Resources */,
 			);
