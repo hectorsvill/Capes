@@ -20,6 +20,8 @@
 		E8EBE5C422EF94BF00B59FD3 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EBE5C322EF94BF00B59FD3 /* LogInViewController.swift */; };
 		E8F2640A22F0B6A30074C4C3 /* WorkSpacesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F2640922F0B6A30074C4C3 /* WorkSpacesTableViewController.swift */; };
 		E8F2640D22F0B8600074C4C3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E8F2640C22F0B8600074C4C3 /* GoogleService-Info.plist */; };
+		E8F2640F22F0BC8C0074C4C3 /* WorkspaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F2640E22F0BC8C0074C4C3 /* WorkspaceTableViewCell.swift */; };
+		E8F2641122F0CFEE0074C4C3 /* WorkSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F2641022F0CFED0074C4C3 /* WorkSpace.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		E8EBE5C322EF94BF00B59FD3 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		E8F2640922F0B6A30074C4C3 /* WorkSpacesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WorkSpacesTableViewController.swift; path = ../WorkSpacesTableViewController.swift; sourceTree = "<group>"; };
 		E8F2640C22F0B8600074C4C3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E8F2640E22F0BC8C0074C4C3 /* WorkspaceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceTableViewCell.swift; sourceTree = "<group>"; };
+		E8F2641022F0CFED0074C4C3 /* WorkSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WorkSpace.swift; path = ../WorkSpace.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				E8EBE58622EF5D4800B59FD3 /* AppDelegate.swift */,
+				E8F2641222F0D0230074C4C3 /* Models */,
 				E8A05D0F22F023E500B19C3D /* Model Controller */,
 				E8EBE5BC22EF8BED00B59FD3 /* View Controllers */,
 				E8EBE5C222EF90BA00B59FD3 /* Resources */,
@@ -144,9 +149,18 @@
 		E8F2640B22F0B7780074C4C3 /* Nav View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E8F2640E22F0BC8C0074C4C3 /* WorkspaceTableViewCell.swift */,
 				E8F2640922F0B6A30074C4C3 /* WorkSpacesTableViewController.swift */,
 			);
 			path = "Nav View Controllers";
+			sourceTree = "<group>";
+		};
+		E8F2641222F0D0230074C4C3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E8F2641022F0CFED0074C4C3 /* WorkSpace.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,6 +305,8 @@
 				E8A05D0E22F023DA00B19C3D /* CapesController.swift in Sources */,
 				E8EBE59922EF5E1F00B59FD3 /* CapesViewController.swift in Sources */,
 				E8EBE5C122EF907300B59FD3 /* SignUpViewController.swift in Sources */,
+				E8F2641122F0CFEE0074C4C3 /* WorkSpace.swift in Sources */,
+				E8F2640F22F0BC8C0074C4C3 /* WorkspaceTableViewCell.swift in Sources */,
 				E8F2640A22F0B6A30074C4C3 /* WorkSpacesTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

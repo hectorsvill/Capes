@@ -1,19 +1,16 @@
 //
-//  CapeController.swift
+//  WorkSpace.swift
 //  Capes
 //
 //  Created by Hector Steven on 7/30/19.
 //  Copyright © 2019 Hector Steven. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
-class CapeController {
-	
-	
-	
-	
-	
 
+struct WorkSpace {
+	
+	
+	
 }
-

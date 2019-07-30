@@ -256,7 +256,7 @@
         <!--Workspaces-->
         <scene sceneID="I5A-zY-Shm">
             <objects>
-                <tableViewController id="4p4-J1-YUy" sceneMemberID="viewController">
+                <tableViewController id="4p4-J1-YUy" customClass="WorkSpacesTableViewController" customModule="Capes" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ZjN-vB-5Kg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -267,7 +267,7 @@
                             <textInputTraits key="textInputTraits"/>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="WorkSpaceCell" rowHeight="202" id="rxQ-r6-kTR">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="WorkSpaceCell" rowHeight="202" id="rxQ-r6-kTR" customClass="WorkspaceTableViewCell" customModule="Capes" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="72" width="414" height="202"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rxQ-r6-kTR" id="GqA-JC-2bp">
@@ -341,6 +341,15 @@
                                         <constraint firstItem="hSG-We-O0h" firstAttribute="centerY" secondItem="GqA-JC-2bp" secondAttribute="centerY" id="wlS-U4-76i"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="cityLabel" destination="mz1-ca-kBa" id="q2b-h1-RVo"/>
+                                    <outlet property="perk1" destination="eFF-YD-qc7" id="T8h-jf-eMn"/>
+                                    <outlet property="perk2" destination="TFh-Hn-hFt" id="gjo-mU-yJy"/>
+                                    <outlet property="perk3" destination="f9G-xN-09I" id="hr9-xx-2Qd"/>
+                                    <outlet property="pricePerLabel" destination="IYY-Cb-aXm" id="H2T-TK-kLc"/>
+                                    <outlet property="spaceImageView" destination="MM6-Aw-znC" id="M5s-IK-g2A"/>
+                                    <outlet property="titleLabel" destination="x43-HF-4Ii" id="dBb-Sa-719"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

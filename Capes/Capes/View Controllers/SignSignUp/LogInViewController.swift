@@ -18,10 +18,14 @@ class LogInViewController: UIViewController {
 	
     override func viewDidLoad() {
         super.viewDidLoad()
-
         errorLabel?.isHidden = true
-		checkUserLoginStatus()
     }
+	
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		checkUserLoginStatus()
+	}
+	
     
 	@IBAction func logInButtonPressed(_ sender: UIButton) {
 		guard let email = emailTextField?.text?.trimmingCharacters(in: .whitespaces),

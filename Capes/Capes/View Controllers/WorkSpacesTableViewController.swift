@@ -14,9 +14,17 @@ class WorkSpacesTableViewController: UITableViewController {
         super.viewDidLoad()
 
     }
+	
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		
+		// fetch all workspaces from firebase
+		//
+		
+	}
+	
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return 10
     }
 
