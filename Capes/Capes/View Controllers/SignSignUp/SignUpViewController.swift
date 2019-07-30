@@ -22,26 +22,43 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 		errorLabel?.isHidden = true
+		
     }
     
 	
 	@IBAction func signUpButtonPressed(_ sender: Any) {
 		
 		if let validateString = validateTextFields() {
+			self.errorLabel.isHidden = false
 			errorLabel.text = validateString
 			return
 		}
 		
-		guard let firstName = firstNameTextField.text?.trimmingCharacters(in: .whitespaces),
-			let lastName = lastNameTextField.text?.trimmingCharacters(in: .whitespaces),
+		guard let firstname = firstNameTextField.text?.trimmingCharacters(in: .whitespaces),
+			let lastname = lastNameTextField.text?.trimmingCharacters(in: .whitespaces),
 			let email = emailTextField.text?.trimmingCharacters(in: .whitespaces),
 			let password = passwordTextField.text?.trimmingCharacters(in: .whitespaces) else { return }
 		
-		Auth.auth().createUser(withEmail: "", password: "") { (result, error) in
+		Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
 			if let error = error{
 				print("error with fb Auth: \(error)")
+				self.errorLabel.isHidden = false
 				self.errorLabel?.text = "Error accurred. Please try again."
 				return
+			} else {
+				// send user data
+				let db = Firestore.firestore()
+				db.collection("users").addDocument(data: ["firstname": firstname, "lastname": lastname, "address": "", "phonenumber": "", "uid": result?.user.uid]){ error in
+					if let error = error {
+						print("Error with firestore: \(error)")
+						return
+					}
+					DispatchQueue.main.async {
+						self.goToMainView()						
+					}
+					
+					
+				}
 			}
 		
 			
@@ -49,37 +66,45 @@ class SignUpViewController: UIViewController {
 		
 		//log in with firebase
 		
-//		let db = Firestore.firestore()
 		
 		// push to main tab controller
 		
 	}
 	
 	@IBAction func cancelButtonPressed(_ sender: Any) {
-		
 		navigationController?.popViewController(animated: true)
 	}
 	
 	
 	private func validateTextFields() -> String? {
-		
 		if 	firstNameTextField?.text?.trimmingCharacters(in: .whitespaces) == "" ||
 			lastNameTextField?.text?.trimmingCharacters(in: .whitespaces) == "" ||
 			emailTextField?.text?.trimmingCharacters(in: .whitespaces) == "" ||
 			passwordTextField?.text?.trimmingCharacters(in: .whitespaces) == "" {
-			
 			return  "Please feel in all the text fields."
 		} else if (isValidPassWord(passwordTextField.text)) {
-			return "Please make sure Password is atleast * characters, contains a special character and a number."
+			return "Must contains a special character and a number."
 		}
 		
 		return nil
 	}
 
 	private func isValidPassWord(_ password: String?) -> Bool{
-		let passwordTest = NSPredicate(format: "SELF MATCHES %@", "^(?=.*[a-z])(?=.*[$@$#!%*?&])[A-Za-z\\d$@$#!%*?&]{8,}")
+		let passwordTest = NSPredicate(format: "SELF MATCHES %@", "^(?=.*[a-z])(?=.[$@$#!%?&]) {8,}")
 		return passwordTest.evaluate(with: password)
 	}
 	
+	
+	private func goToMainView() {
+		guard let homeVC = storyboard?.instantiateViewController(withIdentifier: "HomeVC") as? CapesViewController else {
+			
+			print("homeVC was not found!")
+			return
+		}
+		
+		view.window?.rootViewController = homeVC
+		view.window?.makeKeyAndVisible()
+		
+	}
 
 }
