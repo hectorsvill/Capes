@@ -56,6 +56,17 @@ class WorkSpacesTableViewController: UITableViewController {
 
 
 extension WorkSpacesTableViewController {
+	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		if segue.identifier == "" {
+			guard let vc = segue.destination as? WorkSpaceDetailViewController,
+				let indexpath = tableView.indexPathForSelectedRow else { return }
+			
+			vc.workspace = workspaces[indexpath.row]
+		}
+	}
+	
+	
 	private func fetchWorkSpaces(with city: String) {
 		capeController?.fetchAllWorkSpaces(in: city) { workspaces, error in
 			if let error = error {
