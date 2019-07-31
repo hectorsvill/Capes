@@ -150,9 +150,9 @@
 		E8F2640B22F0B7780074C4C3 /* Nav View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				E8F2641522F145D70074C4C3 /* Views */,
 				E8EBE59822EF5E1F00B59FD3 /* CapesViewController.swift */,
 				E8F2640922F0B6A30074C4C3 /* WorkSpacesTableViewController.swift */,
+				E8F2641522F145D70074C4C3 /* Views */,
 			);
 			path = "Nav View Controllers";
 			sourceTree = "<group>";
