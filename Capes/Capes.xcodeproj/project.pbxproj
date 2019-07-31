@@ -22,6 +22,7 @@
 		E8F2640F22F0BC8C0074C4C3 /* WorkspaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F2640E22F0BC8C0074C4C3 /* WorkspaceTableViewCell.swift */; };
 		E8F2641122F0CFEE0074C4C3 /* WorkSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F2641022F0CFED0074C4C3 /* WorkSpace.swift */; };
 		E8F2641422F0E3F10074C4C3 /* FireStoreReferenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F2641322F0E3F10074C4C3 /* FireStoreReferenceManager.swift */; };
+		E8F2641722F149180074C4C3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F2641622F149180074C4C3 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		E8F2640E22F0BC8C0074C4C3 /* WorkspaceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceTableViewCell.swift; sourceTree = "<group>"; };
 		E8F2641022F0CFED0074C4C3 /* WorkSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkSpace.swift; sourceTree = "<group>"; };
 		E8F2641322F0E3F10074C4C3 /* FireStoreReferenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireStoreReferenceManager.swift; sourceTree = "<group>"; };
+		E8F2641622F149180074C4C3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +119,6 @@
 		E8EBE5BC22EF8BED00B59FD3 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				E8EBE59822EF5E1F00B59FD3 /* CapesViewController.swift */,
 				E8EBE5BF22EF903700B59FD3 /* SignSignUp */,
 				E8F2640B22F0B7780074C4C3 /* Nav View Controllers */,
 			);
@@ -150,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				E8F2641522F145D70074C4C3 /* Views */,
+				E8EBE59822EF5E1F00B59FD3 /* CapesViewController.swift */,
 				E8F2640922F0B6A30074C4C3 /* WorkSpacesTableViewController.swift */,
 			);
 			path = "Nav View Controllers";
@@ -159,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				E8F2641022F0CFED0074C4C3 /* WorkSpace.swift */,
+				E8F2641622F149180074C4C3 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				E8F2641422F0E3F10074C4C3 /* FireStoreReferenceManager.swift in Sources */,
 				E8F2640F22F0BC8C0074C4C3 /* WorkspaceTableViewCell.swift in Sources */,
 				E8F2640A22F0B6A30074C4C3 /* WorkSpacesTableViewController.swift in Sources */,
+				E8F2641722F149180074C4C3 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

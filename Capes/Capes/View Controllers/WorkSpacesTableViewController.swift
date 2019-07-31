@@ -16,14 +16,12 @@ class WorkSpacesTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+		
     }
 	
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
 		
-		// fetch all workspaces from firebase
-		//
 		
 	}
 	

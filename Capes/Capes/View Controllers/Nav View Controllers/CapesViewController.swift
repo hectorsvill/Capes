@@ -13,14 +13,15 @@ protocol CapeControllerProtocol {
 }
 
 class CapesViewController: UITabBarController {
-	let capesController = CapeController()
+	let capeController = CapeController()
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
 
-		for child in children {
-			if child is CapeController {
-				child.cape
+		
+		for childViewController in children {
+			if var childVC = childViewController as? CapeControllerProtocol {
+				childVC.capeController = capeController
 			}
 		}
 		

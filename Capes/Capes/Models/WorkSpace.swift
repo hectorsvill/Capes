@@ -10,12 +10,20 @@ import Foundation
 
 
 struct WorkSpace {
-	var spaceImageView: String
-	var cityLabel: String
-	var titleLabel: String
-	var pricePerLabel: String
-	var perk1: String?
-	var perk2: String?
-	var perk3: String?
+	let uuid: String
+	
+	let name: String
+	let city: String
+	let address: String
+	let zipcode: String
+	
+	let title: String
+	let bio: String
+	let imageUrl: String
+	let price: String
+	let available: Bool
+	let perk1: String
+	let perk2: String
+	let perk3: String
 }
 
