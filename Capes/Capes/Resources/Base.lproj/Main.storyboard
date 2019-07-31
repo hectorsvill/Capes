@@ -358,7 +358,7 @@
                                     <outlet property="perk2" destination="TFh-Hn-hFt" id="gjo-mU-yJy"/>
                                     <outlet property="perk3" destination="f9G-xN-09I" id="hr9-xx-2Qd"/>
                                     <outlet property="pricePerLabel" destination="IYY-Cb-aXm" id="H2T-TK-kLc"/>
-                                    <outlet property="spaceImageView" destination="MM6-Aw-znC" id="M5s-IK-g2A"/>
+                                    <outlet property="spaceImageView" destination="wZL-HW-z0p" id="Osr-fv-Era"/>
                                     <outlet property="titleLabel" destination="x43-HF-4Ii" id="dBb-Sa-719"/>
                                 </connections>
                             </tableViewCell>

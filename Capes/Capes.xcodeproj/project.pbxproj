@@ -17,12 +17,12 @@
 		E8EBE5BE22EF8DCD00B59FD3 /* SignUpLogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EBE5BD22EF8DCD00B59FD3 /* SignUpLogInViewController.swift */; };
 		E8EBE5C122EF907300B59FD3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EBE5C022EF907300B59FD3 /* SignUpViewController.swift */; };
 		E8EBE5C422EF94BF00B59FD3 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EBE5C322EF94BF00B59FD3 /* LogInViewController.swift */; };
-		E8F2640A22F0B6A30074C4C3 /* WorkSpacesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F2640922F0B6A30074C4C3 /* WorkSpacesTableViewController.swift */; };
 		E8F2640D22F0B8600074C4C3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E8F2640C22F0B8600074C4C3 /* GoogleService-Info.plist */; };
 		E8F2640F22F0BC8C0074C4C3 /* WorkspaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F2640E22F0BC8C0074C4C3 /* WorkspaceTableViewCell.swift */; };
 		E8F2641122F0CFEE0074C4C3 /* WorkSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F2641022F0CFED0074C4C3 /* WorkSpace.swift */; };
 		E8F2641422F0E3F10074C4C3 /* FireStoreReferenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F2641322F0E3F10074C4C3 /* FireStoreReferenceManager.swift */; };
 		E8F2641722F149180074C4C3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F2641622F149180074C4C3 /* User.swift */; };
+		E8F2641922F163140074C4C3 /* WorkSpacesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F2641822F163140074C4C3 /* WorkSpacesTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,12 +40,12 @@
 		E8EBE5BD22EF8DCD00B59FD3 /* SignUpLogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpLogInViewController.swift; sourceTree = "<group>"; };
 		E8EBE5C022EF907300B59FD3 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		E8EBE5C322EF94BF00B59FD3 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
-		E8F2640922F0B6A30074C4C3 /* WorkSpacesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WorkSpacesTableViewController.swift; path = ../WorkSpacesTableViewController.swift; sourceTree = "<group>"; };
 		E8F2640C22F0B8600074C4C3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E8F2640E22F0BC8C0074C4C3 /* WorkspaceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceTableViewCell.swift; sourceTree = "<group>"; };
 		E8F2641022F0CFED0074C4C3 /* WorkSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkSpace.swift; sourceTree = "<group>"; };
 		E8F2641322F0E3F10074C4C3 /* FireStoreReferenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireStoreReferenceManager.swift; sourceTree = "<group>"; };
 		E8F2641622F149180074C4C3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E8F2641822F163140074C4C3 /* WorkSpacesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkSpacesTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,7 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				E8EBE59822EF5E1F00B59FD3 /* CapesViewController.swift */,
-				E8F2640922F0B6A30074C4C3 /* WorkSpacesTableViewController.swift */,
+				E8F2641822F163140074C4C3 /* WorkSpacesTableViewController.swift */,
 				E8F2641522F145D70074C4C3 /* Views */,
 			);
 			path = "Nav View Controllers";
@@ -309,6 +309,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8F2641922F163140074C4C3 /* WorkSpacesTableViewController.swift in Sources */,
 				E8EBE5BE22EF8DCD00B59FD3 /* SignUpLogInViewController.swift in Sources */,
 				E8EBE5C422EF94BF00B59FD3 /* LogInViewController.swift in Sources */,
 				E8EBE58722EF5D4800B59FD3 /* AppDelegate.swift in Sources */,
@@ -318,7 +319,6 @@
 				E8F2641122F0CFEE0074C4C3 /* WorkSpace.swift in Sources */,
 				E8F2641422F0E3F10074C4C3 /* FireStoreReferenceManager.swift in Sources */,
 				E8F2640F22F0BC8C0074C4C3 /* WorkspaceTableViewCell.swift in Sources */,
-				E8F2640A22F0B6A30074C4C3 /* WorkSpacesTableViewController.swift in Sources */,
 				E8F2641722F149180074C4C3 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

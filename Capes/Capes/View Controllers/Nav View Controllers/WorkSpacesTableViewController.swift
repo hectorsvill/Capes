@@ -17,16 +17,13 @@ class WorkSpacesTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-		
     }
-	
 	
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
 		
 		let city = FireStoreReferenceManager.northHollywoodCa
 		fetchWorkSpaces(with: city)
-		
 	}
 	
 	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -35,11 +32,15 @@ class WorkSpacesTableViewController: UITableViewController {
 	
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "WorkSpaceCell", for: indexPath)
-		return cell
+		guard let workspaceCell = cell as? WorkspaceTableViewCell else { return cell }
+
+		workspaceCell.workSpace = workspaces[indexPath.row]
+		return workspaceCell
 	}
-	
-	
-	
+}
+
+
+extension WorkSpacesTableViewController {
 	private func fetchWorkSpaces(with city: String) {
 		capeController?.fetchAllWorkSpaces(in: city) { workspaces, error in
 			if let error = error {
@@ -54,10 +55,4 @@ class WorkSpacesTableViewController: UITableViewController {
 		}
 		
 	}
-
-}
-
-
-extension WorkSpacesTableViewController {
-	
 }
