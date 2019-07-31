@@ -17,22 +17,19 @@ class WorkspaceTableViewCell: UITableViewCell {
 
 	@IBOutlet var spaceImageView: UIImageView!
 	
-	@IBOutlet var cityLabel: UILabel!
 	@IBOutlet var titleLabel: UILabel!
+	@IBOutlet var summaryLabel: UILabel!
 	@IBOutlet var pricePerLabel: UILabel!
-	@IBOutlet var perk1: UILabel!
-	@IBOutlet var perk2: UILabel!
-	@IBOutlet var perk3: UILabel!
-	
+
 	private func setupViews() {
 		guard let workspace = workSpace  else { return }
 	
-		cityLabel.text = workspace.city
 		titleLabel.text = workspace.title
-		pricePerLabel.text = workspace.price
-		perk1.text = workspace.perk1
-		perk2.text = workspace.perk2
-		perk3.text = workspace.perk3
+		summaryLabel.text = workspace.bio
+		pricePerLabel.text = "$" + workspace.price + "/hour"
+		
+		
+
 		
 		
 		let url = URL(string: workspace.imageUrl)!
