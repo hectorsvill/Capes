@@ -28,7 +28,7 @@ class CapeController {
 				return
 			}
 			print("Count of snapshot: \(snapShot!.count)")
-			print(snapShot?.documents[0].data()["name"])
+			print(snapShot?.documents[0].data() as! [String: Any])
 //			for document in snapShot!.documents {
 //
 //			}
