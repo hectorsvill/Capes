@@ -72,6 +72,9 @@ class LogInViewController: UIViewController {
 		Auth.auth().signIn(withEmail: email, password: password) { (_, error) in
 			if let error = error {
 				print("Error with fb signIn: \(error)")
+				
+				//alert
+				return
 			}
 			self.goToMainView()
 		}

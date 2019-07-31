@@ -24,13 +24,9 @@ class WorkspaceTableViewCell: UITableViewCell {
 	private func setupViews() {
 		guard let workspace = workSpace  else { return }
 	
-		titleLabel.text = workspace.title
+		titleLabel.text = workspace.title + " - " + workspace.name
 		summaryLabel.text = workspace.bio
 		pricePerLabel.text = "$" + workspace.price + "/hour"
-		
-		
-
-		
 		
 		let url = URL(string: workspace.imageUrl)!
 		URLSession.shared.dataTask(with: url) { (data, _, error) in
@@ -38,14 +34,9 @@ class WorkspaceTableViewCell: UITableViewCell {
 				print("error loading image: \(error)")
 			}
 			guard let data = data else { return }
-			print(data)
 			DispatchQueue.main.async {
 				self.spaceImageView.image = UIImage(data: data)
 			}
 		}.resume()
-		
 	}
-	
-	
-	
 }

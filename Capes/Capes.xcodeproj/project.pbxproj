@@ -23,6 +23,7 @@
 		E8F2641422F0E3F10074C4C3 /* FireStoreReferenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F2641322F0E3F10074C4C3 /* FireStoreReferenceManager.swift */; };
 		E8F2641722F149180074C4C3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F2641622F149180074C4C3 /* User.swift */; };
 		E8F2641922F163140074C4C3 /* WorkSpacesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F2641822F163140074C4C3 /* WorkSpacesTableViewController.swift */; };
+		E8F2641B22F1F9AF0074C4C3 /* WorkSpaceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F2641A22F1F9AF0074C4C3 /* WorkSpaceDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		E8F2641322F0E3F10074C4C3 /* FireStoreReferenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireStoreReferenceManager.swift; sourceTree = "<group>"; };
 		E8F2641622F149180074C4C3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E8F2641822F163140074C4C3 /* WorkSpacesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkSpacesTableViewController.swift; sourceTree = "<group>"; };
+		E8F2641A22F1F9AF0074C4C3 /* WorkSpaceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkSpaceDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 		E8F2640B22F0B7780074C4C3 /* Nav View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E8F2641A22F1F9AF0074C4C3 /* WorkSpaceDetailViewController.swift */,
 				E8EBE59822EF5E1F00B59FD3 /* CapesViewController.swift */,
 				E8F2641822F163140074C4C3 /* WorkSpacesTableViewController.swift */,
 				E8F2641522F145D70074C4C3 /* Views */,
@@ -320,6 +323,7 @@
 				E8F2641422F0E3F10074C4C3 /* FireStoreReferenceManager.swift in Sources */,
 				E8F2640F22F0BC8C0074C4C3 /* WorkspaceTableViewCell.swift in Sources */,
 				E8F2641722F149180074C4C3 /* User.swift in Sources */,
+				E8F2641B22F1F9AF0074C4C3 /* WorkSpaceDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

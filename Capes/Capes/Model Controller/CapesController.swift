@@ -13,10 +13,8 @@ class CapeController {
 
 	init() {
 		//createTestData()
-//		fetchAllWorkSpaces(in: FireStoreReferenceManager.northHollywoodCa)
+		//fetchAllWorkSpaces(in: FireStoreReferenceManager.northHollywoodCa)
 	}
-	
-	
 	
 	func fetchAllWorkSpaces(in city: String, completion: @escaping ([WorkSpace]?, Error?) -> ()) {
 		let fr = FireStoreReferenceManager.root
@@ -40,10 +38,6 @@ class CapeController {
 			completion(workspaces, nil)
 		}
 	}
-	
-	
-	
-	
 
 }
 
