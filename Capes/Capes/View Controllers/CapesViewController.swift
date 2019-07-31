@@ -8,9 +8,21 @@
 
 import UIKit
 
+protocol CapeControllerProtocol {
+	var capeController: CapeController? { get set }
+}
+
 class CapesViewController: UITabBarController {
-    override func viewDidLoad() {
+	let capesController = CapeController()
+	
+	override func viewDidLoad() {
         super.viewDidLoad()
 
+		for child in children {
+			if child is CapeController {
+				child.cape
+			}
+		}
+		
     }
 }

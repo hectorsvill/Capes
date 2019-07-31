@@ -8,7 +8,11 @@
 
 import UIKit
 
+extension WorkSpacesTableViewController: CapeControllerProtocol {
+}
+
 class WorkSpacesTableViewController: UITableViewController {
+	var capeController: CapeController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
