@@ -26,14 +26,27 @@ class WorkspaceTableViewCell: UITableViewCell {
 	
 	private func setupViews() {
 		guard let workspace = workSpace  else { return }
-		
-//		spaceImageView.image =
+	
 		cityLabel.text = workspace.city
 		titleLabel.text = workspace.title
 		pricePerLabel.text = workspace.price
 		perk1.text = workspace.perk1
 		perk2.text = workspace.perk2
 		perk3.text = workspace.perk3
+		
+		
+		let url = URL(string: workspace.imageUrl)!
+		URLSession.shared.dataTask(with: url) { (data, _, error) in
+			if let error = error {
+				print("error loading image: \(error)")
+			}
+			guard let data = data else { return }
+			print(data)
+			DispatchQueue.main.async {
+				self.spaceImageView.image = UIImage(data: data)
+			}
+		}.resume()
+		
 	}
 	
 	
