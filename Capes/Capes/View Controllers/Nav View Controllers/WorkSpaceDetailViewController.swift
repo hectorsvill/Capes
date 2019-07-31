@@ -19,11 +19,12 @@ class WorkSpaceDetailViewController: UIViewController {
 	@IBOutlet var titleLable: UILabel!
 	@IBOutlet var priceLabel: UILabel!
 	@IBOutlet var hostLabel: UILabel!
+	@IBOutlet var cityLabel: UILabel!
 	@IBOutlet var hostBioLabel: UILabel!
 	@IBOutlet var bioTextField: UITextView!
 	@IBOutlet var adressLabel: UILabel!
 	@IBOutlet var mapView: MKMapView!
-	
+	@IBOutlet var adreessLabel: UILabel!
 	
 	
 	override func viewDidLoad() {
@@ -46,9 +47,11 @@ class WorkSpaceDetailViewController: UIViewController {
 		typeOfSpaceLabel.text = "Desk space"
 		titleLable.text = workspace.title
 		priceLabel.text = "$" + workspace.price + "/ hour"
-		hostLabel.text = "Host Name"
+		hostLabel.text = workspace.name
+		cityLabel.text = workspace.city
 		hostBioLabel.text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 		bioTextField.text = workspace.bio
+		adressLabel.text = workspace.address + "\n \(workspace.city), CA \(workspace.zipcode)"
 		
 		let url = URL(string: workspace.imageUrl)!
 		URLSession.shared.dataTask(with: url) { (data, _, error) in

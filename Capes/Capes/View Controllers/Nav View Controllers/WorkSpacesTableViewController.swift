@@ -58,7 +58,7 @@ class WorkSpacesTableViewController: UITableViewController {
 extension WorkSpacesTableViewController {
 	
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-		if segue.identifier == "" {
+		if segue.identifier == "WorkspaceDetail" {
 			guard let vc = segue.destination as? WorkSpaceDetailViewController,
 				let indexpath = tableView.indexPathForSelectedRow else { return }
 			
