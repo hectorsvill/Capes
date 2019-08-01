@@ -87,7 +87,6 @@ class WorkSpaceDetailViewController: UIViewController {
 
 extension WorkSpaceDetailViewController: MKMapViewDelegate {
 	
-	
 	func setupMapView() {
 		guard let workspace = workspace else { return }
 		let address = createWorkSpaceAddress()
@@ -97,11 +96,13 @@ extension WorkSpaceDetailViewController: MKMapViewDelegate {
 			}
 			
 			let workspaceAnnotation = WorkSpaceAnnotation(title: workspace.title, coordinate: coordinate!)
-			
+			let region = MKCoordinateRegion(center: coordinate!, latitudinalMeters: CLLocationDistance(exactly: 500)!, longitudinalMeters: CLLocationDistance(exactly: 500)!)
+			self.mapView.setRegion(self.mapView.regionThatFits(region), animated: true)
 			self.mapView.addAnnotation(workspaceAnnotation)
 			self.mapView.register(MKMarkerAnnotationView.self, forAnnotationViewWithReuseIdentifier: "WorkSpaceAnnotation")
-			
 		}
+		
+		
 		
 	}
 	
@@ -123,19 +124,9 @@ extension WorkSpaceDetailViewController: MKMapViewDelegate {
 			}
 		}
 	}
-
-	
 	
 	func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-//		guard let worspaceAnnotation = annotation as? WorkSpaceAnnotation else { return nil }
 		let annotationview = mapView.dequeueReusableAnnotationView(withIdentifier: "WorkSpaceAnnotation", for: annotation) as! MKMarkerAnnotationView
-		
-		
-		
 		return annotationview
 	}
-	
-	
-	
-	
 }
