@@ -24,6 +24,7 @@
 		E8F2641722F149180074C4C3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F2641622F149180074C4C3 /* User.swift */; };
 		E8F2641922F163140074C4C3 /* WorkSpacesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F2641822F163140074C4C3 /* WorkSpacesTableViewController.swift */; };
 		E8F2641B22F1F9AF0074C4C3 /* WorkSpaceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F2641A22F1F9AF0074C4C3 /* WorkSpaceDetailViewController.swift */; };
+		E8F2641D22F26ED10074C4C3 /* WorkSpaceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F2641C22F26ED10074C4C3 /* WorkSpaceAnnotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		E8F2641622F149180074C4C3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E8F2641822F163140074C4C3 /* WorkSpacesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkSpacesTableViewController.swift; sourceTree = "<group>"; };
 		E8F2641A22F1F9AF0074C4C3 /* WorkSpaceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkSpaceDetailViewController.swift; sourceTree = "<group>"; };
+		E8F2641C22F26ED10074C4C3 /* WorkSpaceAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkSpaceAnnotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +174,7 @@
 		E8F2641522F145D70074C4C3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E8F2641C22F26ED10074C4C3 /* WorkSpaceAnnotation.swift */,
 				E8F2640E22F0BC8C0074C4C3 /* WorkspaceTableViewCell.swift */,
 			);
 			path = Views;
@@ -313,6 +316,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8F2641922F163140074C4C3 /* WorkSpacesTableViewController.swift in Sources */,
+				E8F2641D22F26ED10074C4C3 /* WorkSpaceAnnotation.swift in Sources */,
 				E8EBE5BE22EF8DCD00B59FD3 /* SignUpLogInViewController.swift in Sources */,
 				E8EBE5C422EF94BF00B59FD3 /* LogInViewController.swift in Sources */,
 				E8EBE58722EF5D4800B59FD3 /* AppDelegate.swift in Sources */,
