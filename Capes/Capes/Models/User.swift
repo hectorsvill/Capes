@@ -19,8 +19,10 @@ class User {
 	let state: String?
 	let zipCode: String?
 	
+	let bio: String?
+	
 	init(fisrtName: String, lastName: String, email: String, companyName: String? = nil,
-		 addrees: String? = nil, city: String? = nil, state: String? = nil, zipCode: String? = nil, uuid: String = UUID().uuidString) {
+		 addrees: String? = nil, city: String? = nil, state: String? = nil, zipCode: String? = nil, bio: String? = nil, uuid: String = UUID().uuidString) {
 		self.fisrtName = fisrtName
 		self.lastName = lastName
 		self.email = email
@@ -29,6 +31,7 @@ class User {
 		self.city = city
 		self.state = state
 		self.zipCode = zipCode
+		self.bio = bio
 		self.uuid = uuid
 	}
 }

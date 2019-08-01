@@ -49,7 +49,7 @@ class CapeController {
 // MARK: User Methods
 extension CapeController {
 	func createUserWithFireStore(fisrtName: String, lastName: String, email: String, companyName: String,
-								 addrees: String, city: String, state: String, zipCode: String) {
+								 addrees: String, city: String, state: String, bio: String,zipCode: String) {
 		let uuid = UUID().uuidString
 		let userDictioanary: [String: Any] = [
 			"firstName" : fisrtName,
@@ -60,6 +60,7 @@ extension CapeController {
 			"city": city,
 			"state": state,
 			"zipCode":zipCode,
+			"bio": bio,
 			"uuid": uuid
 		]
 		let root = Firestore.firestore().collection("users")

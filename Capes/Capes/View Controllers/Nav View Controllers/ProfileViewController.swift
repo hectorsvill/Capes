@@ -10,38 +10,50 @@ import UIKit
 
 class ProfileViewController: UIViewController, CapeControllerProtocol {
 	var capeController: CapeController?
+	let settings = ["edit bio", "edit image", "host a workspace"]
 	
 	@IBOutlet var tableView: UITableView!
+	@IBOutlet var imageView: UIImageView!
+	@IBOutlet var bioTextView: UITextView!
+	@IBOutlet var nameLabel: UILabel!
+	@IBOutlet var emailLLabel: UILabel!
+	
 	override func viewDidLoad() {
         super.viewDidLoad()
+		tableView.delegate = self
+		tableView.dataSource = self
+    }
 
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
 		
-    }
-    
+		setupViews()
+		
+	}
 
-    /*
-    // MARK: - Navigation
+	func setupViews(){
+		guard let user = capeController?.currentUser else { return }
+		nameLabel.text = "\(user.fisrtName) \(user.lastName)"
+		emailLLabel.text = user.email
+		
+		bioTextView.text = user.bio == nil ? "Please add a bio" : user.bio
+		
+		
+	}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 
+
+
 extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return 10
+		return settings.count
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "SettingsCell", for: indexPath)
-	
+		cell.textLabel?.text = settings[indexPath.row]
 		return cell
 	}
-	
-	
-	
 }

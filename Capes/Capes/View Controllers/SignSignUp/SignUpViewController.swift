@@ -86,7 +86,7 @@ class SignUpViewController: UIViewController, CapeControllerProtocol {
 			} else {
 				self.saveToUserDefaults(with: email, password: password)
 				self.capeController?.createUserWithFireStore(fisrtName: firstname, lastName: lastname, email: email,
-															 companyName: "", addrees: "", city: "", state: "", zipCode: "")
+															 companyName: "", addrees: "", city: "", state: "", bio: "", zipCode: "")
 				self.goToMainView()
 			}
 		}
