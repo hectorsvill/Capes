@@ -158,8 +158,8 @@
 			children = (
 				E8EBE59822EF5E1F00B59FD3 /* CapesViewController.swift */,
 				E8F2641822F163140074C4C3 /* WorkSpacesTableViewController.swift */,
-				E8F2641E22F29F640074C4C3 /* ProfileViewController.swift */,
 				E8F2641A22F1F9AF0074C4C3 /* WorkSpaceDetailViewController.swift */,
+				E8F2641E22F29F640074C4C3 /* ProfileViewController.swift */,
 				E8F2641522F145D70074C4C3 /* Views */,
 			);
 			path = "Nav View Controllers";

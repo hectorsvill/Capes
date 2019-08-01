@@ -280,6 +280,9 @@
                         <viewLayoutGuide key="safeArea" id="srW-14-J6g"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" id="8ML-m7-30F"/>
+                    <connections>
+                        <outlet property="tableView" destination="bjk-DR-Odt" id="luA-p8-9Ke"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F1m-N9-psb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

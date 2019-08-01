@@ -31,11 +31,11 @@ class CapeController {
 				return
 			}
 			
-			guard let listings = snapShot?.documents else { return }
+			guard let workSpaces = snapShot?.documents else { return }
 			var  workspaces: [WorkSpace] = []
 			
-			for i in 0..<listings.count {
-				let dictionary = (listings[i].data() as [String: Any])
+			for i in 0..<workSpaces.count {
+				let dictionary = (workSpaces[i].data() as [String: Any])
 				let ws = self.createCityWorkSpaceListing(with: dictionary)
 				workspaces.append(ws)
 			}
@@ -78,14 +78,13 @@ extension CapeController {
 		root.getDocuments { snapShot, error in
 			if let error = error {
 				NSLog("Error fetching all workspaces: \(error)")
-				
 				return
 			}
 			
-			guard let listings = snapShot?.documents else { return }
-			print(listings)
-			for i in 0..<listings.count {
-				let dictionary = (listings[i].data() as [String: Any])
+			guard let users = snapShot?.documents else { return }
+			
+			for i in 0..<users.count {
+				let dictionary = (users[i].data() as [String: Any])
 				let emailString = dictionary["email"] as! String
 				if email == emailString {
 					let firstNameString = dictionary["firstName"] as! String
