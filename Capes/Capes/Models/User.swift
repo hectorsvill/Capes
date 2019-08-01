@@ -8,13 +8,27 @@
 
 import Foundation
 
-struct User {
-	let firstName: String
+class User {
+	let uuid: String
+	let fisrtName: String
 	let lastName: String
 	let email: String
-	let address: String
+	let companyName: String
+	let addrees: String
+	let city: String
+	let state: String
+	let zipCode: String
 	
-	var workspaces: [WorkSpace] = []
-	
-	
+	init(fisrtName: String, lastName: String, email: String, companyName: String,
+		 addrees: String, city: String, state: String, zipCode: String, uuid: String = UUID().uuidString) {
+		self.fisrtName = fisrtName
+		self.lastName = lastName
+		self.email = email
+		self.companyName = companyName
+		self.addrees = addrees
+		self.city = city
+		self.state = state
+		self.zipCode = zipCode
+		self.uuid = uuid
+	}
 }
