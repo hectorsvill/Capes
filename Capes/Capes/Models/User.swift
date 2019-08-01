@@ -13,14 +13,14 @@ class User {
 	let fisrtName: String
 	let lastName: String
 	let email: String
-	let companyName: String
-	let addrees: String
-	let city: String
-	let state: String
-	let zipCode: String
+	let companyName: String?
+	let addrees: String?
+	let city: String?
+	let state: String?
+	let zipCode: String?
 	
-	init(fisrtName: String, lastName: String, email: String, companyName: String,
-		 addrees: String, city: String, state: String, zipCode: String, uuid: String = UUID().uuidString) {
+	init(fisrtName: String, lastName: String, email: String, companyName: String? = nil,
+		 addrees: String? = nil, city: String? = nil, state: String? = nil, zipCode: String? = nil, uuid: String = UUID().uuidString) {
 		self.fisrtName = fisrtName
 		self.lastName = lastName
 		self.email = email

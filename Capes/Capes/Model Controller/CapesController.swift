@@ -12,10 +12,13 @@ import Firebase
 
 class CapeController {
 	var allWorkSpaceListing: [String: WorkSpace] = [:]
-
+	var currentUser: User?
+	
+	
 	init() {
 		//createTestData()
 		//fetchAllWorkSpaces(in: FireStoreReferenceManager.northHollywoodCa)
+		
 	}
 	
 	func fetchAllWorkSpaces(in city: String, completion: @escaping ([WorkSpace]?, Error?) -> ()) {
@@ -68,6 +71,34 @@ extension CapeController {
 			}
 		}
 	}
+	
+	func findUserInFireStore(email: String) {
+		let root = Firestore.firestore().collection("users")
+		
+		root.getDocuments { snapShot, error in
+			if let error = error {
+				NSLog("Error fetching all workspaces: \(error)")
+				
+				return
+			}
+			
+			guard let listings = snapShot?.documents else { return }
+			print(listings)
+			for i in 0..<listings.count {
+				let dictionary = (listings[i].data() as [String: Any])
+				let emailString = dictionary["email"] as! String
+				if email == emailString {
+					let firstNameString = dictionary["firstName"] as! String
+					let lastNameString = dictionary["lastName"] as! String
+					self.currentUser = User(fisrtName: firstNameString, lastName: lastNameString, email: email)
+				}
+			}
+			
+		}
+	}
+	
+	
+	
 }
 
 
