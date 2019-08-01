@@ -9,7 +9,6 @@
 import UIKit
 import Firebase
 
-
 class CapeController {
 	var allWorkSpaceListing: [String: WorkSpace] = [:]
 	var currentUser: User?
@@ -156,4 +155,17 @@ extension CapeController {
 			print("SUCCESS!!")
 		}
 	}
+	
+	
+	func createAWorkSpaceWith(dictionary: [String: Any]){
+		let root = FireStoreReferenceManager.root
+		root.collection(dictionary["city"] as! String).document(dictionary["workSpaceTitle"] as! String).setData(dictionary){ error in
+			if let error = error {
+				NSLog("Error sending data to firebase: \(error)")
+				return
+			}
+		}
+	}
+	
+	
 }

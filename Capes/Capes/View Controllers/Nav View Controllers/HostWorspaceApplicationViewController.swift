@@ -60,10 +60,7 @@ class HostWorspaceApplicationViewController: UIViewController, CapeControllerPro
 		let workspace = Space(hostUuid: userUuid, desk: deskSwitch.isOn, privateOffice: privatOficeSwitch.isOn, pricePerHour: pricePerHour, pricePerDay: pricePerday, workstationTitle: workSpaceTitle, imageUrl: imageUrl, bio: bio, address: address, city: city, state: state, zipcode: zipcode, companyName: companyName)
 		// send to firestore
 		
-		
-		
-		
-		print(workspace.getDictionary())
+		capeController?.createAWorkSpaceWith(dictionary: workspace.getDictionary())
 	}
 	
 	private func validatefields() -> String? {
