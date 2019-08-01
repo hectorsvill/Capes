@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		04625939D3BEA6AC56968EEF /* Pods_Capes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22D964DF5B5B84943C306192 /* Pods_Capes.framework */; };
 		E8A05D0E22F023DA00B19C3D /* CapesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A05D0D22F023DA00B19C3D /* CapesController.swift */; };
+		E8B0295722F36EB1003AC0F8 /* HostWorspaceApplicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B0295622F36EB1003AC0F8 /* HostWorspaceApplicationViewController.swift */; };
 		E8EBE58722EF5D4800B59FD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EBE58622EF5D4800B59FD3 /* AppDelegate.swift */; };
 		E8EBE58C22EF5D4800B59FD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8EBE58A22EF5D4800B59FD3 /* Main.storyboard */; };
 		E8EBE58E22EF5D4A00B59FD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8EBE58D22EF5D4A00B59FD3 /* Assets.xcassets */; };
@@ -27,7 +28,6 @@
 		E8F2641D22F26ED10074C4C3 /* WorkSpaceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F2641C22F26ED10074C4C3 /* WorkSpaceAnnotation.swift */; };
 		E8F2641F22F29F640074C4C3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F2641E22F29F640074C4C3 /* ProfileViewController.swift */; };
 		E8F2642122F34FBC0074C4C3 /* EditSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F2642022F34FBC0074C4C3 /* EditSettingsViewController.swift */; };
-		E8F2642322F3515F0074C4C3 /* HostApplicationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F2642222F3515F0074C4C3 /* HostApplicationTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +35,7 @@
 		79FCAFBBC01712076E9175AC /* Pods-Capes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Capes.release.xcconfig"; path = "Target Support Files/Pods-Capes/Pods-Capes.release.xcconfig"; sourceTree = "<group>"; };
 		8B8FAA653E59AD299F9DBBFB /* Pods-Capes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Capes.debug.xcconfig"; path = "Target Support Files/Pods-Capes/Pods-Capes.debug.xcconfig"; sourceTree = "<group>"; };
 		E8A05D0D22F023DA00B19C3D /* CapesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapesController.swift; sourceTree = "<group>"; };
+		E8B0295622F36EB1003AC0F8 /* HostWorspaceApplicationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostWorspaceApplicationViewController.swift; sourceTree = "<group>"; };
 		E8EBE58322EF5D4800B59FD3 /* Capes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Capes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8EBE58622EF5D4800B59FD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8EBE58B22EF5D4800B59FD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -55,7 +56,6 @@
 		E8F2641C22F26ED10074C4C3 /* WorkSpaceAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkSpaceAnnotation.swift; sourceTree = "<group>"; };
 		E8F2641E22F29F640074C4C3 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		E8F2642022F34FBC0074C4C3 /* EditSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditSettingsViewController.swift; sourceTree = "<group>"; };
-		E8F2642222F3515F0074C4C3 /* HostApplicationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostApplicationTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,7 +165,7 @@
 				E8F2641A22F1F9AF0074C4C3 /* WorkSpaceDetailViewController.swift */,
 				E8F2641E22F29F640074C4C3 /* ProfileViewController.swift */,
 				E8F2642022F34FBC0074C4C3 /* EditSettingsViewController.swift */,
-				E8F2642222F3515F0074C4C3 /* HostApplicationTableViewController.swift */,
+				E8B0295622F36EB1003AC0F8 /* HostWorspaceApplicationViewController.swift */,
 				E8F2641522F145D70074C4C3 /* Views */,
 			);
 			path = "Nav View Controllers";
@@ -337,8 +337,8 @@
 				E8EBE59922EF5E1F00B59FD3 /* CapesViewController.swift in Sources */,
 				E8EBE5C122EF907300B59FD3 /* SignUpViewController.swift in Sources */,
 				E8F2641122F0CFEE0074C4C3 /* WorkSpace.swift in Sources */,
+				E8B0295722F36EB1003AC0F8 /* HostWorspaceApplicationViewController.swift in Sources */,
 				E8F2641422F0E3F10074C4C3 /* FireStoreReferenceManager.swift in Sources */,
-				E8F2642322F3515F0074C4C3 /* HostApplicationTableViewController.swift in Sources */,
 				E8F2640F22F0BC8C0074C4C3 /* WorkspaceTableViewCell.swift in Sources */,
 				E8F2641722F149180074C4C3 /* User.swift in Sources */,
 				E8F2641B22F1F9AF0074C4C3 /* WorkSpaceDetailViewController.swift in Sources */,
