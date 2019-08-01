@@ -43,11 +43,11 @@ class ProfileViewController: UIViewController, CapeControllerProtocol {
 	
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		if segue.identifier == "ChangeSettingsSegue" {
-//			guard let vc = segue.destination as?  else { return }
-			
-			
+			guard let vc = segue.destination as? EditSettingsViewController else { return }
+			vc.capeController = capeController
 		} else if segue.identifier == "HostWorkSpaceSegue" {
-			
+			guard let vc = segue.destination as? HostWorspaceApplicationViewController else { return }
+			vc.capeController = capeController
 		}
 	}
 	

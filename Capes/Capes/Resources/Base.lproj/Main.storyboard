@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wtV-fl-U56">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sAz-O7-HNh">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -321,6 +321,9 @@
                                             <constraint firstAttribute="height" constant="52" id="JmJ-xq-Qxl"/>
                                         </constraints>
                                         <state key="normal" title="Host  A WorkSpace"/>
+                                        <connections>
+                                            <segue destination="wtV-fl-U56" kind="show" identifier="HostWorkSpaceSegue" id="yE3-bE-hDL"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -353,10 +356,10 @@
             </objects>
             <point key="canvasLocation" x="3237.68115942029" y="-1033.2589285714284"/>
         </scene>
-        <!--View Controller-->
+        <!--Host Worspace Application View Controller-->
         <scene sceneID="V9Y-c3-CaP">
             <objects>
-                <viewController id="wtV-fl-U56" sceneMemberID="viewController">
+                <viewController id="wtV-fl-U56" customClass="HostWorspaceApplicationViewController" customModule="Capes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Of9-iX-hgI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1300"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -390,6 +393,9 @@
                                                     </label>
                                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gdt-eK-Zi4">
                                                         <rect key="frame" x="325" y="0.0" width="51" height="31"/>
+                                                        <connections>
+                                                            <action selector="privateOfficeToggle:" destination="wtV-fl-U56" eventType="valueChanged" id="1Us-Yz-4Wq"/>
+                                                        </connections>
                                                     </switch>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -405,6 +411,9 @@
                                                     </label>
                                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="UeI-Xf-6Mp">
                                                         <rect key="frame" x="325" y="0.0" width="51" height="31"/>
+                                                        <connections>
+                                                            <action selector="deskToggle:" destination="wtV-fl-U56" eventType="valueChanged" id="6k8-MR-BCb"/>
+                                                        </connections>
                                                     </switch>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -480,7 +489,22 @@
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QWu-a6-dbq">
                                                 <rect key="frame" x="20" y="910" width="374" height="30"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Submit"/>
+                                                <connections>
+                                                    <action selector="submitButtonPressed:" destination="wtV-fl-U56" eventType="touchUpInside" id="mOs-kq-plc"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HZo-Zm-uTH">
+                                                <rect key="frame" x="20" y="948" width="374" height="30"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Cancel">
+                                                    <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="cancelButtonPressed:" destination="wtV-fl-U56" eventType="touchUpInside" id="LYP-SL-8KF"/>
+                                                    <action selector="submitButtonPressed:" destination="wtV-fl-U56" eventType="touchUpInside" id="oeg-Fi-ZS0"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.9510807966" green="0.9510807966" blue="0.9510807966" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -492,7 +516,6 @@
                                             <constraint firstItem="4Bs-hy-rey" firstAttribute="top" secondItem="4Ta-VB-fWP" secondAttribute="bottom" constant="16" id="45h-iB-C4n"/>
                                             <constraint firstItem="CPt-I9-dyY" firstAttribute="leading" secondItem="ABH-El-ify" secondAttribute="leading" constant="20" id="7BK-NI-8c0"/>
                                             <constraint firstItem="QWu-a6-dbq" firstAttribute="top" secondItem="BnU-LF-YrL" secondAttribute="bottom" constant="8" id="7tH-xR-39C"/>
-                                            <constraint firstAttribute="bottom" secondItem="QWu-a6-dbq" secondAttribute="bottom" constant="360" id="8zf-4Q-DQM"/>
                                             <constraint firstAttribute="trailing" secondItem="d4m-Aq-Muo" secondAttribute="trailing" constant="20" id="9Mo-mi-06p"/>
                                             <constraint firstItem="8y0-jp-dcw" firstAttribute="top" secondItem="LVy-JO-pvg" secondAttribute="bottom" constant="8" id="9hw-Yj-MeQ"/>
                                             <constraint firstItem="jSS-hK-caQ" firstAttribute="leading" secondItem="ABH-El-ify" secondAttribute="leading" constant="20" id="9tN-6t-PdP"/>
@@ -538,6 +561,7 @@
                                             <constraint firstItem="dAB-ME-Yr3" firstAttribute="leading" secondItem="ABH-El-ify" secondAttribute="leading" constant="20" id="xJ5-z4-4gj"/>
                                             <constraint firstAttribute="trailing" secondItem="jSS-hK-caQ" secondAttribute="trailing" constant="20" id="xL9-vs-dAz"/>
                                             <constraint firstAttribute="trailing" secondItem="CPt-I9-dyY" secondAttribute="trailing" constant="20" id="xOa-j7-fYw"/>
+                                            <constraint firstAttribute="bottom" secondItem="HZo-Zm-uTH" secondAttribute="bottom" constant="322" id="yHY-Up-mwS"/>
                                             <constraint firstItem="4Ta-VB-fWP" firstAttribute="leading" secondItem="ABH-El-ify" secondAttribute="leading" constant="20" id="yiT-Mm-eFc"/>
                                             <constraint firstItem="8y0-jp-dcw" firstAttribute="top" secondItem="LVy-JO-pvg" secondAttribute="bottom" constant="8" id="zQ7-cR-vb6"/>
                                         </constraints>
@@ -564,10 +588,23 @@
                         <viewLayoutGuide key="safeArea" id="zyZ-Wt-bXG"/>
                     </view>
                     <size key="freeformSize" width="414" height="1300"/>
+                    <connections>
+                        <outlet property="addressTextField" destination="vxM-4U-egm" id="dju-NE-2Bg"/>
+                        <outlet property="bioTextView" destination="dAB-ME-Yr3" id="0ol-vP-DiO"/>
+                        <outlet property="cityTextField" destination="LVy-JO-pvg" id="nY5-CV-iLt"/>
+                        <outlet property="companyNameTextField" destination="BnU-LF-YrL" id="PJR-nR-wFH"/>
+                        <outlet property="deskSwitch" destination="UeI-Xf-6Mp" id="EWM-UV-w9P"/>
+                        <outlet property="imageUrlTextField" destination="d4m-Aq-Muo" id="3Pe-HS-hc5"/>
+                        <outlet property="pricePerDayTextField" destination="jGd-b2-pPz" id="40w-14-oYI"/>
+                        <outlet property="pricePerHourTextField" destination="CPt-I9-dyY" id="i5g-Ra-wDA"/>
+                        <outlet property="privatOficeSwitch" destination="Gdt-eK-Zi4" id="Eip-yD-Ctj"/>
+                        <outlet property="workTitleTextTitle" destination="jSS-hK-caQ" id="RVB-J4-ipR"/>
+                        <outlet property="zipcodeTextField" destination="8y0-jp-dcw" id="j06-jG-rly"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8lJ-4r-4Oi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3264" y="4"/>
+            <point key="canvasLocation" x="3238" y="-168"/>
         </scene>
         <!--Edit Settings View Controller-->
         <scene sceneID="KeS-6z-dzP">

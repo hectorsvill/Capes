@@ -8,17 +8,15 @@
 
 import UIKit
 
-class EditSettingsViewController: UIViewController {
-
-	@IBOutlet var editBioLabel: UILabel!
+class EditSettingsViewController: UIViewController, CapeControllerProtocol {
+	var capeController: CapeController?
 	
+	@IBOutlet var editBioLabel: UILabel!
 	@IBOutlet var bioTextView: UITextView!
 	
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
-
-		
     }
 	
 	@IBAction func saveButtonPressed(_ sender: Any) {
