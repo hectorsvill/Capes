@@ -40,6 +40,17 @@ class ProfileViewController: UIViewController, CapeControllerProtocol {
 		
 		
 	}
+	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		if segue.identifier == "ChangeSettingsSegue" {
+//			guard let vc = segue.destination as?  else { return }
+			
+			
+		} else if segue.identifier == "HostWorkSpaceSegue" {
+			
+		}
+	}
+	
 
 
 }
