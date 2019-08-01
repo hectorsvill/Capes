@@ -25,7 +25,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="314" height="30"/>
                                         <state key="normal" title="Signup"/>
                                         <connections>
-                                            <segue destination="Urg-JJ-ele" kind="show" identifier="SignUpSegue" id="l20-QE-Rxq"/>
+                                            <segue destination="Urg-JJ-ele" kind="show" identifier="SignUpViewSegue" id="l20-QE-Rxq"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z0v-Zd-8DR">
@@ -35,7 +35,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="Pnt-lE-I2Z" kind="show" identifier="LogInSegue" id="FSY-kW-RpQ"/>
+                                            <segue destination="Pnt-lE-I2Z" kind="show" identifier="LogInViewSegue" id="FSY-kW-RpQ"/>
                                         </connections>
                                     </button>
                                 </subviews>

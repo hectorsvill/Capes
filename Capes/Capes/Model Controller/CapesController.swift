@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+
 
 class CapeController {
 	var allWorkSpaceListing: [String: WorkSpace] = [:]
@@ -47,6 +49,7 @@ extension CapeController {
 								 addrees: String, city: String, state: String, zipCode: String) {
 		let uuid = UUID().uuidString
 		let userDictioanary: [String: Any] = [
+			"firstName" : fisrtName,
 			"lastName" : lastName,
 			"email" : email,
 			"companyName" : companyName,
@@ -56,10 +59,12 @@ extension CapeController {
 			"zipCode":zipCode,
 			"uuid": uuid
 		]
-		let root = FireStoreReferenceManager.userRoot
+		let root = Firestore.firestore().collection("users")
 		root.document(uuid).setData(userDictioanary) {error in
 			if let error = error {
 				print("error saving Data to firebase: \(error)")
+			} else {
+				print("user data sent to fr \(uuid)")
 			}
 		}
 	}
