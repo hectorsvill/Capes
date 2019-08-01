@@ -19,17 +19,16 @@ class HostWorspaceApplicationViewController: UIViewController, CapeControllerPro
 	@IBOutlet var workTitleTextTitle: UITextField!
 	@IBOutlet var imageUrlTextField: UITextField!
 	@IBOutlet var bioTextView: UITextView!
-	
 	@IBOutlet var addressTextField: UITextField!
 	@IBOutlet var cityTextField: UITextField!
+	@IBOutlet var stateTextField: UITextField!
 	@IBOutlet var zipcodeTextField: UITextField!
 	@IBOutlet var companyNameTextField: UITextField!
 	
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
     }
+	
 	@IBAction func deskToggle(_ sender: Any) {
 		privatOficeSwitch.isOn = false
 	}
@@ -44,7 +43,27 @@ class HostWorspaceApplicationViewController: UIViewController, CapeControllerPro
 			showSimpleAlert(with: errorMessage)
 			return
 		}
-		print("here")
+		
+		guard let pricePerHour = pricePerHourTextField.text?.trimmingCharacters(in: .whitespaces),
+			let pricePerday = pricePerDayTextField?.text?.trimmingCharacters(in: .whitespaces),
+			let workSpaceTitle = workTitleTextTitle?.text?.trimmingCharacters(in: .whitespaces),
+			let imageUrl = imageUrlTextField.text?.trimmingCharacters(in: .whitespaces),
+			let bio = bioTextView.text?.trimmingCharacters(in: .whitespaces),
+			let address = addressTextField?.text?.trimmingCharacters(in: .whitespaces),
+			let city = cityTextField?.text?.trimmingCharacters(in: .whitespaces),
+			let state = stateTextField?.text?.trimmingCharacters(in: .whitespaces),
+			let zipcode = zipcodeTextField?.text?.trimmingCharacters(in: .whitespaces),
+			let companyName = companyNameTextField?.text?.trimmingCharacters(in: .whitespaces),
+			let userUuid = 	capeController?.currentUser?.uuid else { return }
+		
+		
+		let workspace = Space(hostUuid: userUuid, desk: deskSwitch.isOn, privateOffice: privatOficeSwitch.isOn, pricePerHour: pricePerHour, pricePerDay: pricePerday, workstationTitle: workSpaceTitle, imageUrl: imageUrl, bio: bio, address: address, city: city, state: state, zipcode: zipcode, companyName: companyName)
+		// send to firestore
+		
+		
+		
+		
+		print(workspace.getDictionary())
 	}
 	
 	private func validatefields() -> String? {
@@ -74,6 +93,5 @@ class HostWorspaceApplicationViewController: UIViewController, CapeControllerPro
 	@IBAction func cancelButtonPressed(_ sender: Any) {
 		dismiss(animated: true)
 	}
-	
-
 }
+

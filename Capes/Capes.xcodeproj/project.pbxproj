@@ -10,6 +10,7 @@
 		04625939D3BEA6AC56968EEF /* Pods_Capes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22D964DF5B5B84943C306192 /* Pods_Capes.framework */; };
 		E8A05D0E22F023DA00B19C3D /* CapesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A05D0D22F023DA00B19C3D /* CapesController.swift */; };
 		E8B0295722F36EB1003AC0F8 /* HostWorspaceApplicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B0295622F36EB1003AC0F8 /* HostWorspaceApplicationViewController.swift */; };
+		E8B0295922F38CC4003AC0F8 /* Space.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B0295822F38CC4003AC0F8 /* Space.swift */; };
 		E8EBE58722EF5D4800B59FD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EBE58622EF5D4800B59FD3 /* AppDelegate.swift */; };
 		E8EBE58C22EF5D4800B59FD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8EBE58A22EF5D4800B59FD3 /* Main.storyboard */; };
 		E8EBE58E22EF5D4A00B59FD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8EBE58D22EF5D4A00B59FD3 /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 		8B8FAA653E59AD299F9DBBFB /* Pods-Capes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Capes.debug.xcconfig"; path = "Target Support Files/Pods-Capes/Pods-Capes.debug.xcconfig"; sourceTree = "<group>"; };
 		E8A05D0D22F023DA00B19C3D /* CapesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapesController.swift; sourceTree = "<group>"; };
 		E8B0295622F36EB1003AC0F8 /* HostWorspaceApplicationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostWorspaceApplicationViewController.swift; sourceTree = "<group>"; };
+		E8B0295822F38CC4003AC0F8 /* Space.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Space.swift; sourceTree = "<group>"; };
 		E8EBE58322EF5D4800B59FD3 /* Capes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Capes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8EBE58622EF5D4800B59FD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8EBE58B22EF5D4800B59FD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 			children = (
 				E8F2641022F0CFED0074C4C3 /* WorkSpace.swift */,
 				E8F2641622F149180074C4C3 /* User.swift */,
+				E8B0295822F38CC4003AC0F8 /* Space.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 				E8EBE5BE22EF8DCD00B59FD3 /* SignUpLogInViewController.swift in Sources */,
 				E8EBE5C422EF94BF00B59FD3 /* LogInViewController.swift in Sources */,
 				E8F2641F22F29F640074C4C3 /* ProfileViewController.swift in Sources */,
+				E8B0295922F38CC4003AC0F8 /* Space.swift in Sources */,
 				E8EBE58722EF5D4800B59FD3 /* AppDelegate.swift in Sources */,
 				E8A05D0E22F023DA00B19C3D /* CapesController.swift in Sources */,
 				E8EBE59922EF5E1F00B59FD3 /* CapesViewController.swift in Sources */,

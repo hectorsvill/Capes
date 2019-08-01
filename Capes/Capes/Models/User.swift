@@ -18,7 +18,6 @@ class User {
 	let city: String?
 	let state: String?
 	let zipCode: String?
-	
 	let bio: String?
 	
 	init(fisrtName: String, lastName: String, email: String, companyName: String? = nil,
