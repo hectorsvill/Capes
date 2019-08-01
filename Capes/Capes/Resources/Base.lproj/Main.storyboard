@@ -239,22 +239,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xjS-cT-csc">
-                                <rect key="frame" x="0.0" y="44" width="414" height="257"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icons8-user-male-40" translatesAutoresizingMaskIntoConstraints="NO" id="ef5-SN-01m">
-                                        <rect key="frame" x="285" y="74" width="115" height="109"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bjk-DR-Odt">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bjk-DR-Odt">
                                 <rect key="frame" x="0.0" y="309" width="414" height="504"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="504" id="bBG-e9-Uir"/>
+                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="SettingsCell" textLabel="XIS-aD-Dlp" style="IBUITableViewCellStyleDefault" id="xhj-RO-h6r">
                                         <rect key="frame" x="0.0" y="28" width="414" height="44"/>
@@ -275,8 +265,58 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="YUt-A0-tv3">
+                                <rect key="frame" x="8" y="52" width="398" height="62"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ywr-1J-agA">
+                                        <rect key="frame" x="0.0" y="0.0" width="398" height="27.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GSB-41-gwo">
+                                        <rect key="frame" x="0.0" y="35.5" width="398" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jmd-8R-DW3">
+                                <rect key="frame" x="8" y="122" width="398" height="179"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="AYZ-cD-RKU">
+                                        <rect key="frame" x="0.0" y="0.0" width="244" height="179"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="179" id="qlL-2s-WxX"/>
+                                        </constraints>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oD6-9g-Jki">
+                                        <rect key="frame" x="252" y="0.0" width="146" height="179"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="146" id="8gR-Wa-SLK"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="YUt-A0-tv3" firstAttribute="top" secondItem="srW-14-J6g" secondAttribute="top" constant="8" id="38T-8e-fgI"/>
+                            <constraint firstItem="srW-14-J6g" firstAttribute="trailing" secondItem="YUt-A0-tv3" secondAttribute="trailing" constant="8" id="A8B-Uc-CpR"/>
+                            <constraint firstItem="bjk-DR-Odt" firstAttribute="top" secondItem="jmd-8R-DW3" secondAttribute="bottom" constant="8" id="AGU-as-jdb"/>
+                            <constraint firstItem="bjk-DR-Odt" firstAttribute="leading" secondItem="SeE-1f-bRz" secondAttribute="leading" id="H4o-jZ-zSs"/>
+                            <constraint firstItem="YUt-A0-tv3" firstAttribute="leading" secondItem="srW-14-J6g" secondAttribute="leading" constant="8" id="QWU-Rb-J8p"/>
+                            <constraint firstItem="bjk-DR-Odt" firstAttribute="bottom" secondItem="srW-14-J6g" secondAttribute="bottom" id="XaV-gq-clH"/>
+                            <constraint firstItem="bjk-DR-Odt" firstAttribute="centerX" secondItem="jmd-8R-DW3" secondAttribute="centerX" id="cq5-zf-55L"/>
+                            <constraint firstItem="srW-14-J6g" firstAttribute="trailing" secondItem="jmd-8R-DW3" secondAttribute="trailing" constant="8" id="foz-82-24c"/>
+                            <constraint firstItem="jmd-8R-DW3" firstAttribute="leading" secondItem="srW-14-J6g" secondAttribute="leading" constant="8" id="kPH-Eh-uw4"/>
+                            <constraint firstItem="jmd-8R-DW3" firstAttribute="top" secondItem="YUt-A0-tv3" secondAttribute="bottom" constant="8" id="vk2-DH-NjP"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="srW-14-J6g"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" id="8ML-m7-30F"/>
@@ -603,7 +643,4 @@
             <point key="canvasLocation" x="-700" y="-1831.4732142857142"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="icons8-user-male-40" width="40" height="40"/>
-    </resources>
 </document>

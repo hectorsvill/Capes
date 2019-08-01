@@ -10,5 +10,6 @@ target 'Capes' do
 	pod 'Firebase/Auth'
 	pod 'Firebase/Core'
 	pod 'Firebase/Firestore'
+	pod 'JTAppleCalendar'
 	
 end
