@@ -11,9 +11,11 @@ import FirebaseCore
 import Firebase
 
 struct FireStoreReferenceManager {
-	static let enviroment = "workspace"
+	static let workspaces = "workspace"
+	static let users = "users"
 	static let northHollywoodCa = "North Hollywood"
 	
 	static let db = Firestore.firestore()
-	static let root = db.collection(enviroment).document("CA")
+	static let root = db.collection(workspaces).document("CA")
+	static let userRoot = db.collection(users)
 }

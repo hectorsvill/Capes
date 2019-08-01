@@ -41,6 +41,31 @@ class CapeController {
 
 }
 
+// MARK: User Methods
+extension CapeController {
+	func createUserWithFireStore(fisrtName: String, lastName: String, email: String, companyName: String,
+								 addrees: String, city: String, state: String, zipCode: String) {
+		let uuid = UUID().uuidString
+		let userDictioanary: [String: Any] = [
+			"lastName" : lastName,
+			"email" : email,
+			"companyName" : companyName,
+			"addrees": addrees,
+			"city": city,
+			"state": state,
+			"zipCode":zipCode,
+			"uuid": uuid
+		]
+		let root = FireStoreReferenceManager.userRoot
+		root.document(uuid).setData(userDictioanary) {error in
+			if let error = error {
+				print("error saving Data to firebase: \(error)")
+			}
+		}
+	}
+}
+
+
 // MARK: Helper Methods
 extension CapeController {
 	
@@ -86,15 +111,13 @@ extension CapeController {
 			"uuid": UUID().uuidString,
 		]
 		
-		
-		
-		FireStoreReferenceManager.root.collection(superWorkSpaceData["city"] as! String).document(superWorkSpaceData["name"] as! String).setData(superWorkSpaceData){ error in
+		let root = FireStoreReferenceManager.root
+		root.collection(superWorkSpaceData["city"] as! String).document(superWorkSpaceData["name"] as! String).setData(superWorkSpaceData){ error in
 			if let error = error {
 				NSLog("Error sending data to firebase: \(error)")
 				return
 			}
 			print("SUCCESS!!")
 		}
-		
 	}
 }

@@ -10,8 +10,9 @@ import UIKit
 import FirebaseAuth
 import Firebase
 
-class SignUpViewController: UIViewController {
-
+class SignUpViewController: UIViewController, CapeControllerProtocol {
+	var capeController: CapeController?
+	
 	@IBOutlet var firstNameTextField: UITextField!
 	@IBOutlet var lastNameTextField: UITextField!
 	@IBOutlet var emailTextField: UITextField!
@@ -83,25 +84,28 @@ class SignUpViewController: UIViewController {
 				
 				return
 			} else {
-				Firestore.firestore().collection("users").addDocument(data: ["firstname": firstname, "lastname": lastname, "address": "", "phonenumber": "", "uid": result!.user.uid]){ error in
-					if let error = error {
-						print("Error with firestore: \(error)")
-						return
-					}
-					self.goToMainView()
-					self.saveToUserDefaults(with: email, password: password)
-				}
+				self.saveToUserDefaults(with: email, password: password)
+				self.capeController?.createUserWithFireStore(fisrtName: firstname, lastName: lastname, email: email,
+															 companyName: "", addrees: "", city: "", state: "", zipCode: "")
+				self.goToMainView()
 			}
 		}
 	}
 	
-	
 	private func saveToUserDefaults(with email: String, password: String) {
 		let userDefaults = UserDefaults.standard
-		
 		userDefaults.set(email, forKey: "email")
 		userDefaults.set(password, forKey: "password")
 	}
-	
-
 }
+
+/*
+
+
+//				Firestore.firestore().collection("users").addDocument(data: ["firstname": firstname, "lastname": lastname, "address": "", "phonenumber": "", "uid": result!.user.uid]){ error in
+//					if let error = error {
+//						print("Error with firestore: \(error)")
+//						return
+//					}
+//					//				}
+*/

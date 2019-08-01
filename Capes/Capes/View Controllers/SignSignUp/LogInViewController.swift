@@ -11,7 +11,8 @@ import FirebaseAuth
 import Firebase
 
 class LogInViewController: UIViewController {
-
+	var capeController: CapeController?
+	
 	@IBOutlet var emailTextField: UITextField!
 	@IBOutlet var passwordTextField: UITextField!
 	@IBOutlet var errorLabel: UILabel!
@@ -52,7 +53,6 @@ class LogInViewController: UIViewController {
 			print("homeVC was not found!")
 			return
 		}
-		
 		view.window?.rootViewController = homeVC
 		view.window?.makeKeyAndVisible()
 	}
@@ -79,5 +79,4 @@ class LogInViewController: UIViewController {
 			self.goToMainView()
 		}
 	}
-	
 }

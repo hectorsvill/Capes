@@ -17,13 +17,10 @@ class CapesViewController: UITabBarController {
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
-
-		
 		for childViewController in children {
 			if var childVC = childViewController as? CapeControllerProtocol {
 				childVC.capeController = capeController
 			}
 		}
-		
     }
 }
