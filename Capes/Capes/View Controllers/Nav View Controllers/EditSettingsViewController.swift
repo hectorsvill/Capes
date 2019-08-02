@@ -17,7 +17,14 @@ class EditSettingsViewController: UIViewController, CapeControllerProtocol {
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
-    }
+		setupViews()
+	}
+	
+	private func setupViews() {
+		guard let user = capeController?.currentUser else { return }
+		bioTextView.text = user.bio
+	}
+	
 	
 	@IBAction func saveButtonPressed(_ sender: Any) {
 		// send data to firebase

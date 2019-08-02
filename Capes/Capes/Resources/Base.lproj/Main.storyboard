@@ -510,6 +510,16 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IAu-JS-VhD">
+                                                <rect key="frame" x="20" y="1034" width="41" height="30"/>
+                                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Demo">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="demoButtonPressed:" destination="wtV-fl-U56" eventType="touchUpInside" id="UeW-h3-Nb7"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.9510807966" green="0.9510807966" blue="0.9510807966" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -537,6 +547,7 @@
                                             <constraint firstItem="9W6-Vv-CyP" firstAttribute="leading" secondItem="ABH-El-ify" secondAttribute="leading" constant="20" id="V9p-of-fpz"/>
                                             <constraint firstAttribute="trailing" secondItem="BnU-LF-YrL" secondAttribute="trailing" constant="20" id="Vi6-CK-wcI"/>
                                             <constraint firstAttribute="trailing" secondItem="dAB-ME-Yr3" secondAttribute="trailing" constant="20" id="VlV-Zf-8uu"/>
+                                            <constraint firstItem="IAu-JS-VhD" firstAttribute="leading" secondItem="ABH-El-ify" secondAttribute="leading" constant="20" id="WPM-Gs-MQE"/>
                                             <constraint firstAttribute="trailing" secondItem="LVy-JO-pvg" secondAttribute="trailing" constant="20" id="WrJ-dG-SXc"/>
                                             <constraint firstAttribute="trailing" secondItem="kGS-xt-9uQ" secondAttribute="trailing" constant="20" id="XD1-EY-IlK"/>
                                             <constraint firstItem="4Ta-VB-fWP" firstAttribute="top" secondItem="EiL-YO-2JO" secondAttribute="bottom" constant="8" id="XGf-IY-fge"/>
@@ -551,6 +562,7 @@
                                             <constraint firstAttribute="trailing" secondItem="vxM-4U-egm" secondAttribute="trailing" constant="20" id="huA-YG-EQR"/>
                                             <constraint firstAttribute="trailing" secondItem="9W6-Vv-CyP" secondAttribute="trailing" constant="20" id="hy1-xe-j4v"/>
                                             <constraint firstItem="HZo-Zm-uTH" firstAttribute="top" secondItem="QWu-a6-dbq" secondAttribute="bottom" constant="8" id="iLu-Yt-FLk"/>
+                                            <constraint firstItem="IAu-JS-VhD" firstAttribute="top" secondItem="HZo-Zm-uTH" secondAttribute="bottom" constant="8" id="iZG-3W-1cW"/>
                                             <constraint firstAttribute="trailing" secondItem="4Bs-hy-rey" secondAttribute="trailing" constant="20" id="iZt-Og-DKk"/>
                                             <constraint firstItem="CPt-I9-dyY" firstAttribute="top" secondItem="9W6-Vv-CyP" secondAttribute="bottom" constant="8" id="kAc-Q6-fsq"/>
                                             <constraint firstItem="Xgt-Dy-Uxk" firstAttribute="top" secondItem="dAB-ME-Yr3" secondAttribute="bottom" constant="8" id="kB5-9k-Teb"/>
@@ -607,13 +619,13 @@
                         <outlet property="pricePerHourTextField" destination="CPt-I9-dyY" id="i5g-Ra-wDA"/>
                         <outlet property="privatOficeSwitch" destination="Gdt-eK-Zi4" id="Eip-yD-Ctj"/>
                         <outlet property="stateTextField" destination="V6L-63-F6I" id="cVo-5m-Ca8"/>
-                        <outlet property="workTitleTextTitle" destination="jSS-hK-caQ" id="RVB-J4-ipR"/>
+                        <outlet property="workStationTitleTextTitle" destination="jSS-hK-caQ" id="RVB-J4-ipR"/>
                         <outlet property="zipcodeTextField" destination="8y0-jp-dcw" id="j06-jG-rly"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8lJ-4r-4Oi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3238" y="-168"/>
+            <point key="canvasLocation" x="3237.68115942029" y="-168.08035714285714"/>
         </scene>
         <!--Edit Settings View Controller-->
         <scene sceneID="KeS-6z-dzP">
