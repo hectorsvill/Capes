@@ -47,6 +47,13 @@ class WorkSpaceDetailViewController: UIViewController {
 	@IBAction func bookThisButtonPressed(_ sender: Any) {
 		// get WorkSpace
 		
+		let ac = UIAlertController(title: "Book This WorkSpace", message: nil, preferredStyle: .actionSheet)
+		ac.addAction(UIAlertAction(title: "ok", style: .default, handler: { action in
+			self.dismiss(animated: true, completion: nil)
+		}))
+		
+		ac.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+		present(ac, animated: true)
 		
 	}
 	
@@ -70,7 +77,7 @@ class WorkSpaceDetailViewController: UIViewController {
 	
 	private func setupViews() {
 		guard let workspace = space else { return }
-		typeOfSpaceLabel.text = !(space!.desk) ? "Desk space" : "Private Office Space"
+		typeOfSpaceLabel.text = space!.desk == true ? "Desk space" : "Private Office Space"
 		titleLable.text = workspace.workSpaceTitle
 		pricePerHourLabel.text = "$" + workspace.pricePerHour + "/ hour"
 		pricePerDayLabel.text = "$" + workspace.pricePerday + "/ day"

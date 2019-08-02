@@ -348,6 +348,7 @@
                         <outlet property="imageView" destination="oD6-9g-Jki" id="3HO-XC-TN0"/>
                         <outlet property="nameLabel" destination="ywr-1J-agA" id="Vhk-Kj-bXr"/>
                         <outlet property="tableView" destination="bjk-DR-Odt" id="luA-p8-9Ke"/>
+                        <segue destination="9q3-Ag-rmX" kind="show" identifier="EditBioSegue" id="OFr-pD-bNK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F1m-N9-psb" userLabel="First Responder" sceneMemberID="firstResponder"/>

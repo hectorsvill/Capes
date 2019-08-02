@@ -81,6 +81,8 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
 			picker.allowsEditing = true
 			picker.delegate = self
 			present(picker, animated: true)
+		} else if indexPath.row == 0 {
+			performSegue(withIdentifier: "EditBioSegue", sender: self)
 		}
 	}
 	
