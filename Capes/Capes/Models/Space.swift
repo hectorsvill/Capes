@@ -40,7 +40,7 @@ class Space {
 		self.privateOffice = privateOffice
 		
 		self.pricePerHour = pricePerHour
-		self.pricePerday = pricePerHour
+		self.pricePerday = pricePerDay
 		self.workSpaceTitle = workstationTitle
 		self.imageUrl = imageUrl
 		

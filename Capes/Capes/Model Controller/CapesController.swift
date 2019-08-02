@@ -10,15 +10,8 @@ import UIKit
 import Firebase
 
 class CapeController {
-	var allWorkSpaceListing: [String: WorkSpace] = [:]
+	//var allWorkSpaceListing: [String: WorkSpace] = [:]
 	var currentUser: User? { didSet { createTestData() } }
-	
-	
-	init() {
-		//createTestData()
-		//fetchAllWorkSpaces(in: FireStoreReferenceManager.northHollywoodCa)
-		
-	}
 	
 	func fetchAllWorkSpaces(in city: String, completion: @escaping ([Space]?, Error?) -> ()) {
 		let fr = FireStoreReferenceManager.db.collection(FireStoreReferenceManager.workspaces)
@@ -35,12 +28,9 @@ class CapeController {
 			
 			for i in 0..<workSpaces.count {
 				let dictionary = (workSpaces[i].data() as [String: Any])
-				print(dictionary)
 				let space = Space(dict: dictionary)
 				spaces.append(space)
-				
 			}
-
 			completion(spaces, nil)
 		}
 	}
@@ -54,8 +44,6 @@ class CapeController {
 				}
 		}
 	}
-	
-
 }
 
 // MARK: User Methods
@@ -119,14 +107,14 @@ extension CapeController {
 	
 	private func createTestData() {
 		guard let currentUserUUID = currentUser?.uuid else { return }
-		let space1 = Space(hostUuid: currentUserUUID, desk: true, privateOffice: false, pricePerHour: "5", pricePerDay: "45", workstationTitle: "Office Space in NoHo",
+		let space1 = Space(hostUuid: currentUserUUID, desk: true, privateOffice: false, pricePerHour: "2", pricePerDay: "35", workstationTitle: "Office Space in NoHo",
 						   imageUrl: "https://locations-api-production.imgix.net/locations/image/22431fbc-473c-11e9-b4ab-0ec6db7d2a3c/3._20180725_WeWork_Clearfork_-_Common_Areas_-_Hot_Desk-1-2.jpg?auto=format%20compress&fit=crop&q=50&w=900&h=506",
 						   bio: "Our North Hollywood coworking space offers a location in close proximity to the industry’s biggest movers-and-shakers—Television Academy and Universal Studios are just down the road. Ideally situated in the heart of the NoHo Arts District, our all-inclusive workspace features beautiful lounges, sleek private offices, a boardroom, and two classrooms that can be combined to fit up to 80 people. Simplify your commute with the metro at North Hollywood Station, onsite parking and bike storage, and easy access to the 170. After work, treat the team to dinner at a restaurant lining the boulevard, or visit one of the galleries in Valley Village. Surround yourself with a vibrant community of artists and entrepreneurs at WeWork a 5161 Lankershim Boulevard. Schedule a visit to find out more. ",
 						   address: "5161 Lankershim Blvd",
 						   city: "North Hollywood", state: "CA", zipcode: "91601",
 						   companyName: "WeWork")
 		
-		let space2 = Space(hostUuid: currentUserUUID, desk: true, privateOffice: false, pricePerHour: "5", pricePerDay: "45", workstationTitle: "Office Space in NoHo",
+		let space2 = Space(hostUuid: currentUserUUID, desk: true, privateOffice: false, pricePerHour: "5", pricePerDay: "65", workstationTitle: "Office Space in NoHo",
 						   imageUrl: "https://locations-api-production.imgix.net/locations/image/a231b4b8-683e-11e9-9f38-0ec6db7d2a3c/20190228_WeWork_222_Pacific_Coast_Highway_-_Common_Areas_-_Wide-2.jpg?auto=format%20compress&fit=crop&q=50&w=900&h=506",
 						   bio: "Our North Hollywood coworking space offers a location in close proximity to the industry’s biggest movers-and-shakers—Television Academy and Universal Studios are just down the road. Ideally situated in the heart of the NoHo Arts District, our all-inclusive workspace features beautiful lounges, sleek private offices, a boardroom, and two classrooms that can be combined to fit up to 80 people. Simplify your commute with the metro at North Hollywood Station, onsite parking and bike storage, and easy access to the 170. After work, treat the team to dinner at a restaurant lining the boulevard, or visit one of the galleries in Valley Village. Surround yourself with a vibrant community of artists and entrepreneurs at WeWork a 5161 Lankershim Boulevard. Schedule a visit to find out more. ",
 						   address: "5161 Lankershim Blvd",
@@ -134,7 +122,7 @@ extension CapeController {
 						   companyName: "WeWork")
 
 
-		let space3 = Space(hostUuid: currentUserUUID, desk: true, privateOffice: false, pricePerHour: "5", pricePerDay: "45", workstationTitle: "Finding Coworking Space in El Segundo",
+		let space3 = Space(hostUuid: currentUserUUID, desk: true, privateOffice: false, pricePerHour: "4", pricePerDay: "35", workstationTitle: "Finding Coworking Space in El Segundo",
 						   imageUrl: "https://locations-api-production.imgix.net/locations/image/a264a968-683e-11e9-9f38-0ec6db7d2a3c/20190228_WeWork_222_Pacific_Coast_Highway_-_Front_Desk_-_Wide.jpg?auto=format%20compress&fit=crop&q=50&w=900&h=506",
 						   bio: "Our North Hollywood coworking space offers a location in close proximity to the industry’s biggest movers-and-shakers—Television Academy and Universal Studios are just down the road. Ideally situated in the heart of the NoHo Arts District, our all-inclusive workspace features beautiful lounges, sleek private offices, a boardroom, and two classrooms that can be combined to fit up to 80 people. Simplify your commute with the metro at North Hollywood Station, onsite parking and bike storage, and easy access to the 170. After work, treat the team to dinner at a restaurant lining the boulevard, or visit one of the galleries in Valley Village. Surround yourself with a vibrant community of artists and entrepreneurs at WeWork a 5161 Lankershim Boulevard. Schedule a visit to find out more. ",
 						   address: "222 Pacific Coast Highway",

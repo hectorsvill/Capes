@@ -12,23 +12,19 @@ import MapKit
 class WorkSpaceDetailViewController: UIViewController {
 
 	var space: Space?
-//	var space: Space?
-	
 	@IBOutlet var imageView: UIImageView!
-	
 	@IBOutlet var typeOfSpaceLabel: UILabel!
 	@IBOutlet var titleLable: UILabel!
-	@IBOutlet var priceLabel: UILabel!
+	
+	@IBOutlet var pricePerHourLabel: UILabel!
+	@IBOutlet var pricePerDayLabel: UILabel!
+	
 	@IBOutlet var hostLabel: UILabel!
 	@IBOutlet var cityLabel: UILabel!
-	@IBOutlet var hostBioLabel: UILabel!
 	@IBOutlet var bioTextField: UITextView!
-	
 	@IBOutlet var addressTextField: UITextView!
-	
 	@IBOutlet var mapView: MKMapView!
-	
-	
+
 	override var prefersStatusBarHidden: Bool{
 		return true
 	}
@@ -49,6 +45,9 @@ class WorkSpaceDetailViewController: UIViewController {
 	}
 	
 	@IBAction func bookThisButtonPressed(_ sender: Any) {
+		// get WorkSpace
+		
+		
 	}
 	
 	private func createWorkSpaceAddress() -> String {
@@ -73,13 +72,10 @@ class WorkSpaceDetailViewController: UIViewController {
 		guard let workspace = space else { return }
 		typeOfSpaceLabel.text = !(space!.desk) ? "Desk space" : "Private Office Space"
 		titleLable.text = workspace.workSpaceTitle
-		priceLabel.text = "$" + workspace.pricePerHour + "/ hour"
-		
+		pricePerHourLabel.text = "$" + workspace.pricePerHour + "/ hour"
+		pricePerDayLabel.text = "$" + workspace.pricePerday + "/ day"
 		hostLabel.text = workspace.companyName
-		
-		
 		cityLabel.text = workspace.city
-		hostBioLabel.text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 		bioTextField.text = workspace.bio
 		addressTextField.text = createWorkSpaceAddress()
 		
