@@ -21,7 +21,9 @@ class EditSettingsViewController: UIViewController, CapeControllerProtocol {
 	
 	@IBAction func saveButtonPressed(_ sender: Any) {
 		// send data to firebase
-	
+		guard let bio = bioTextView.text?.trimmingCharacters(in: .whitespaces) else { return }
+		capeController?.currentUser?.bio = bio
+		dismiss(animated: true, completion: nil)
 	}
 	
 	@IBAction func cancelButtonPressed(_ sender: Any) {

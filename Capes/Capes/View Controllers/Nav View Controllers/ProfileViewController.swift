@@ -44,7 +44,7 @@ class ProfileViewController: UIViewController, CapeControllerProtocol {
 	}
 	
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-		if segue.identifier == "ChangeSettingsSegue" {
+		if segue.identifier == "EditBioSegue" {
 			guard let vc = segue.destination as? EditSettingsViewController else { return }
 			vc.capeController = capeController
 		} else if segue.identifier == "HostWorkSpaceSegue" {
@@ -106,6 +106,9 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
 		view.window?.rootViewController = homeVC
 		view.window?.makeKeyAndVisible()
 	}
+	
+	
+	
 	
 }
 
