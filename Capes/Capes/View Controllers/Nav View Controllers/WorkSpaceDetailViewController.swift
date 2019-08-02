@@ -52,7 +52,7 @@ class WorkSpaceDetailViewController: UIViewController {
 			self.dismiss(animated: true, completion: nil)
 		}))
 		
-		ac.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+		ac.addAction(UIAlertAction(title: "Canel", style: .cancel, handler: nil))
 		present(ac, animated: true)
 		
 	}

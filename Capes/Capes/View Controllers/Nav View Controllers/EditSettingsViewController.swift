@@ -23,6 +23,11 @@ class EditSettingsViewController: UIViewController, CapeControllerProtocol {
 		// send data to firebase
 		guard let bio = bioTextView.text?.trimmingCharacters(in: .whitespaces) else { return }
 		capeController?.currentUser?.bio = bio
+	
+		//let user = capeController?.currentUser
+		//update user in fb
+		
+
 		dismiss(animated: true, completion: nil)
 	}
 	
