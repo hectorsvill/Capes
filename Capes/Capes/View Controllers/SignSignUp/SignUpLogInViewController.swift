@@ -13,10 +13,19 @@ import Firebase
 class SignUpLogInViewController: UIViewController {
 	let capecontroller = CapeController()
 	
+	@IBOutlet var signUpButton: UIButton!
+	@IBOutlet var loginButton: UIButton!
+	
 	override func viewDidLoad() {
         super.viewDidLoad()
+		styleButtons()
     }
 	
+	func styleButtons() {
+		signUpButton.layer.cornerRadius = 1
+		signUpButton.layer.cornerRadius = 15
+		loginButton.layer.cornerRadius = 15
+	}
 	
 	private func goToMainView() {
 		guard let homeVC = storyboard?.instantiateViewController(withIdentifier: "HomeVC") as? CapesViewController else {

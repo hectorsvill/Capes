@@ -12,13 +12,12 @@ import MapKit
 class WorkSpaceDetailViewController: UIViewController {
 
 	var space: Space?
+	
 	@IBOutlet var imageView: UIImageView!
 	@IBOutlet var typeOfSpaceLabel: UILabel!
 	@IBOutlet var titleLable: UILabel!
-	
 	@IBOutlet var pricePerHourLabel: UILabel!
 	@IBOutlet var pricePerDayLabel: UILabel!
-	
 	@IBOutlet var hostImageView: UIImageView!
 	@IBOutlet var hostLabel: UILabel!
 	@IBOutlet var cityLabel: UILabel!
@@ -26,6 +25,10 @@ class WorkSpaceDetailViewController: UIViewController {
 	@IBOutlet var addressTextField: UITextView!
 	@IBOutlet var mapView: MKMapView!
 
+	@IBOutlet var bookThisButton: UIButton!
+	@IBOutlet var backButton: UIButton!
+	
+	
 	override var prefersStatusBarHidden: Bool{
 		return true
 	}
@@ -78,6 +81,10 @@ class WorkSpaceDetailViewController: UIViewController {
 	}
 	
 	private func setupViews() {
+		backButton.layer.cornerRadius = 10
+		bookThisButton.layer.cornerRadius = 15
+		
+		
 		guard let workspace = space else { return }
 		typeOfSpaceLabel.text = space!.desk == true ? "Desk space" : "Private Office Space"
 		titleLable.text = workspace.workSpaceTitle
