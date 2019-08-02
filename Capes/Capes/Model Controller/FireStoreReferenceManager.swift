@@ -16,6 +16,6 @@ struct FireStoreReferenceManager {
 	static let northHollywoodCa = "North Hollywood"
 	
 	static let db = Firestore.firestore()
-	static let root = db.collection(workspaces).document("CA")
+	
 	static let userRoot = db.collection(users)
 }

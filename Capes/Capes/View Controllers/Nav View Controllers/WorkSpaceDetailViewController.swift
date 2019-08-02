@@ -11,7 +11,8 @@ import MapKit
 
 class WorkSpaceDetailViewController: UIViewController {
 
-	var workspace: WorkSpace?
+	var space: Space?
+//	var space: Space?
 	
 	@IBOutlet var imageView: UIImageView!
 	
@@ -26,8 +27,11 @@ class WorkSpaceDetailViewController: UIViewController {
 	@IBOutlet var addressTextField: UITextView!
 	
 	@IBOutlet var mapView: MKMapView!
-	@IBOutlet var adreessLabel: UILabel!
 	
+	
+	override var prefersStatusBarHidden: Bool{
+		return true
+	}
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,18 +48,15 @@ class WorkSpaceDetailViewController: UIViewController {
 		dismiss(animated: true, completion: nil)
 	}
 	
-	
-	
 	@IBAction func bookThisButtonPressed(_ sender: Any) {
-		
 	}
 	
 	private func createWorkSpaceAddress() -> String {
-		guard let workspace = workspace else { return "-1" }
-		return workspace.address + "\n \(workspace.city), CA \(workspace.zipcode)"
+		guard let space = space else { return "-1" }
+		return space.address + "\n \(space.city), CA \(space.zipCode)"
 	}
 	
-	private func fetchImage(_ workspace: WorkSpace) {
+	private func fetchImage(_ workspace: Space) {
 		let url = URL(string: workspace.imageUrl)!
 		URLSession.shared.dataTask(with: url) { (data, _, error) in
 			if let error = error {
@@ -69,11 +70,14 @@ class WorkSpaceDetailViewController: UIViewController {
 	}
 	
 	private func setupViews() {
-		guard let workspace = workspace else { return }
-		typeOfSpaceLabel.text = "Desk space"
-		titleLable.text = workspace.title
-		priceLabel.text = "$" + workspace.price + "/ hour"
-		hostLabel.text = workspace.name
+		guard let workspace = space else { return }
+		typeOfSpaceLabel.text = !(space!.desk) ? "Desk space" : "Private Office Space"
+		titleLable.text = workspace.workSpaceTitle
+		priceLabel.text = "$" + workspace.pricePerHour + "/ hour"
+		
+		hostLabel.text = workspace.companyName
+		
+		
 		cityLabel.text = workspace.city
 		hostBioLabel.text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 		bioTextField.text = workspace.bio
@@ -88,14 +92,14 @@ class WorkSpaceDetailViewController: UIViewController {
 extension WorkSpaceDetailViewController: MKMapViewDelegate {
 	
 	func setupMapView() {
-		guard let workspace = workspace else { return }
+		guard let workspace = space else { return }
 		let address = createWorkSpaceAddress()
 		createCoordinateFromAddress(address: address) { (coordinate, error) in
 			if let error = error {
 				print("error with setupMapViews: \(error)")
 			}
 			
-			let workspaceAnnotation = WorkSpaceAnnotation(title: workspace.title, coordinate: coordinate!)
+			let workspaceAnnotation = WorkSpaceAnnotation(title: workspace.workSpaceTitle, coordinate: coordinate!)
 			let region = MKCoordinateRegion(center: coordinate!, latitudinalMeters: CLLocationDistance(exactly: 500)!, longitudinalMeters: CLLocationDistance(exactly: 500)!)
 			self.mapView.setRegion(self.mapView.regionThatFits(region), animated: true)
 			self.mapView.addAnnotation(workspaceAnnotation)

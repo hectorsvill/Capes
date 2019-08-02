@@ -11,7 +11,7 @@ import Firebase
 
 class CapeController {
 	var allWorkSpaceListing: [String: WorkSpace] = [:]
-	var currentUser: User?
+	var currentUser: User? { didSet { createTestData() } }
 	
 	
 	init() {
@@ -20,10 +20,10 @@ class CapeController {
 		
 	}
 	
-	func fetchAllWorkSpaces(in city: String, completion: @escaping ([WorkSpace]?, Error?) -> ()) {
-		let fr = FireStoreReferenceManager.root
+	func fetchAllWorkSpaces(in city: String, completion: @escaping ([Space]?, Error?) -> ()) {
+		let fr = FireStoreReferenceManager.db.collection(FireStoreReferenceManager.workspaces)
 		
-		fr.collection(city).getDocuments { snapShot, error in
+		fr.getDocuments { snapShot, error in
 			if let error = error {
 				NSLog("Error fetching all workspaces: \(error)")
 				completion(nil, error)
@@ -31,17 +31,30 @@ class CapeController {
 			}
 			
 			guard let workSpaces = snapShot?.documents else { return }
-			var  workspaces: [WorkSpace] = []
+			var  spaces: [Space] = []
 			
 			for i in 0..<workSpaces.count {
 				let dictionary = (workSpaces[i].data() as [String: Any])
-				let ws = self.createCityWorkSpaceListing(with: dictionary)
-				workspaces.append(ws)
+				
+//				let ws = self.createCityWorkSpaceListing(with: dictionary)
+//				workspaces.append(ws)
+				
 			}
 
-			completion(workspaces, nil)
+			completion(spaces, nil)
 		}
 	}
+	
+	func createAWorkSpaceWith(dictionary: [String: Any]){
+		FireStoreReferenceManager.db.collection(FireStoreReferenceManager.workspaces)
+			.document(dictionary["uuid"] as! String).setData(dictionary){ error in
+				if let error = error {
+					NSLog("Error sending data to firebase: \(error)")
+					return
+				}
+		}
+	}
+	
 
 }
 
@@ -104,68 +117,45 @@ extension CapeController {
 // MARK: Helper Methods
 extension CapeController {
 	
-	
-	
-	private func createCityWorkSpaceListing(with dictionary: [String: Any]) -> WorkSpace{
-//		print(dictionary.keys)
-		let name = dictionary["name"] as! String
-		let city = dictionary["city"] as! String
-		let address = dictionary["address"] as! String
-		let zipcode = dictionary["zipcode"] as! String
-		
-		let title = dictionary["title"] as! String
-		let bio = dictionary["bio"] as! String
-		let imageUrl = dictionary["imageUrl"] as! String
-		let price = dictionary["Price"] as! String
-		
-		let perk1 = dictionary["perk1"] as! String
-		let perk2 = dictionary["perk2"] as! String
-		let perk3 = dictionary["perk3"] as! String
-		
-		return WorkSpace(name: name, city: city, address: address, zipcode: zipcode, title: title, bio: bio, imageUrl: imageUrl, price: price, perk1: perk1, perk2: perk2, perk3: perk3)
-	}
-	
 	private func createTestData() {
-		let superWorkSpaceData: [String: Any] = [
-			"name": "Super Work Space",
-			
-			"city": "North Hollywood",
-			"address": "3361 Lankershim Blvd",
-			"state": "Ca",
-			"zipcode": "91601",
-			
-			"title": "Office Space in NoHo ",
-			"bio" : "An upgraded private office with access to premium shared spaces and amenities. Includes your own meeting rooms, lounges, and executive offices dedicated to your team.",
-			"imageUrl": "https://locations-api-production.imgix.net/locations/image/f6afe556-473b-11e9-bbd3-0ec6db7d2a3c/Web_150DPI-20180605_WeWork_Xujiahui_-_Common_Areas_-_Wide-1.jpg",
-			"Price": "25",
-			"available": true,
-			"perk1": "Coffee",
-			"perk2": "Play Area",
-			"perk3": "Lounge",
-			
-			"uuid": UUID().uuidString,
-		]
+		guard let currentUserUUID = currentUser?.uuid else { return }
+		let space1 = Space(hostUuid: currentUserUUID, desk: true, privateOffice: false, pricePerHour: "5", pricePerDay: "45", workstationTitle: "Office Space in NoHo",
+						   imageUrl: "https://locations-api-production.imgix.net/locations/image/22431fbc-473c-11e9-b4ab-0ec6db7d2a3c/3._20180725_WeWork_Clearfork_-_Common_Areas_-_Hot_Desk-1-2.jpg?auto=format%20compress&fit=crop&q=50&w=900&h=506",
+						   bio: "Our North Hollywood coworking space offers a location in close proximity to the industry’s biggest movers-and-shakers—Television Academy and Universal Studios are just down the road. Ideally situated in the heart of the NoHo Arts District, our all-inclusive workspace features beautiful lounges, sleek private offices, a boardroom, and two classrooms that can be combined to fit up to 80 people. Simplify your commute with the metro at North Hollywood Station, onsite parking and bike storage, and easy access to the 170. After work, treat the team to dinner at a restaurant lining the boulevard, or visit one of the galleries in Valley Village. Surround yourself with a vibrant community of artists and entrepreneurs at WeWork a 5161 Lankershim Boulevard. Schedule a visit to find out more. ",
+						   address: "5161 Lankershim Blvd",
+						   city: "North Hollywood", state: "CA", zipcode: "91601",
+						   companyName: "WeWork")
 		
-		let root = FireStoreReferenceManager.root
-		root.collection(superWorkSpaceData["city"] as! String).document(superWorkSpaceData["name"] as! String).setData(superWorkSpaceData){ error in
-			if let error = error {
-				NSLog("Error sending data to firebase: \(error)")
-				return
+		let space2 = Space(hostUuid: currentUserUUID, desk: true, privateOffice: false, pricePerHour: "5", pricePerDay: "45", workstationTitle: "Office Space in NoHo",
+						   imageUrl: "https://locations-api-production.imgix.net/locations/image/a231b4b8-683e-11e9-9f38-0ec6db7d2a3c/20190228_WeWork_222_Pacific_Coast_Highway_-_Common_Areas_-_Wide-2.jpg?auto=format%20compress&fit=crop&q=50&w=900&h=506",
+						   bio: "Our North Hollywood coworking space offers a location in close proximity to the industry’s biggest movers-and-shakers—Television Academy and Universal Studios are just down the road. Ideally situated in the heart of the NoHo Arts District, our all-inclusive workspace features beautiful lounges, sleek private offices, a boardroom, and two classrooms that can be combined to fit up to 80 people. Simplify your commute with the metro at North Hollywood Station, onsite parking and bike storage, and easy access to the 170. After work, treat the team to dinner at a restaurant lining the boulevard, or visit one of the galleries in Valley Village. Surround yourself with a vibrant community of artists and entrepreneurs at WeWork a 5161 Lankershim Boulevard. Schedule a visit to find out more. ",
+						   address: "5161 Lankershim Blvd",
+						   city: "North Hollywood", state: "CA", zipcode: "91601",
+						   companyName: "WeWork")
+
+
+		let space3 = Space(hostUuid: currentUserUUID, desk: true, privateOffice: false, pricePerHour: "5", pricePerDay: "45", workstationTitle: "Finding Coworking Space in El Segundo",
+						   imageUrl: "https://locations-api-production.imgix.net/locations/image/a264a968-683e-11e9-9f38-0ec6db7d2a3c/20190228_WeWork_222_Pacific_Coast_Highway_-_Front_Desk_-_Wide.jpg?auto=format%20compress&fit=crop&q=50&w=900&h=506",
+						   bio: "Our North Hollywood coworking space offers a location in close proximity to the industry’s biggest movers-and-shakers—Television Academy and Universal Studios are just down the road. Ideally situated in the heart of the NoHo Arts District, our all-inclusive workspace features beautiful lounges, sleek private offices, a boardroom, and two classrooms that can be combined to fit up to 80 people. Simplify your commute with the metro at North Hollywood Station, onsite parking and bike storage, and easy access to the 170. After work, treat the team to dinner at a restaurant lining the boulevard, or visit one of the galleries in Valley Village. Surround yourself with a vibrant community of artists and entrepreneurs at WeWork a 5161 Lankershim Boulevard. Schedule a visit to find out more. ",
+						   address: "222 Pacific Coast Highway",
+						   city: "El Segundo", state: "CA", zipcode: "90245",
+						   companyName: "WeWork")
+		
+		let list  = [space1, space2, space3]
+		for l in list{
+			
+			FireStoreReferenceManager.db.collection(FireStoreReferenceManager.workspaces)
+				.document(l.uuid).setData(l.getDictionary()){ error in
+					if let error = error {
+						NSLog("Error sending data to firebase: \(error)")
+						return
+					}
 			}
-			print("SUCCESS!!")
 		}
+		
 	}
 	
 	
-	func createAWorkSpaceWith(dictionary: [String: Any]){
-		let root = FireStoreReferenceManager.root
-		root.collection(dictionary["city"] as! String).document(dictionary["workSpaceTitle"] as! String).setData(dictionary){ error in
-			if let error = error {
-				NSLog("Error sending data to firebase: \(error)")
-				return
-			}
-		}
-	}
 	
 	
 }

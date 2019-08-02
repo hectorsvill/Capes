@@ -77,6 +77,10 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
 			signOut()
 		}else if indexPath.row == 1{
 			//editImage
+			let picker = UIImagePickerController()
+			picker.allowsEditing = true
+			picker.delegate = self
+			present(picker, animated: true)
 		}
 	}
 	
@@ -101,4 +105,14 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
 		view.window?.makeKeyAndVisible()
 	}
 	
+}
+
+extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+	func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+		guard let image = info[.editedImage] as? UIImage else { return }
+		
+		dismiss(animated: true)
+		
+		imageView.image = image
+	}
 }

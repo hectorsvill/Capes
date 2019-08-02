@@ -10,7 +10,7 @@ import UIKit
 
 class WorkspaceTableViewCell: UITableViewCell {
 	
-	var workSpace: WorkSpace? {
+	var space: Space? {
 		didSet { setupViews() }
 	}
 	
@@ -22,13 +22,13 @@ class WorkspaceTableViewCell: UITableViewCell {
 	@IBOutlet var pricePerLabel: UILabel!
 
 	private func setupViews() {
-		guard let workspace = workSpace  else { return }
+		guard let space = space  else { return }
 	
-		titleLabel.text = workspace.title + " - " + workspace.name
-		summaryLabel.text = workspace.bio
-		pricePerLabel.text = "$" + workspace.price + "/hour"
+		titleLabel.text = space.workSpaceTitle
+		summaryLabel.text = space.bio
+		pricePerLabel.text = "$" + space.pricePerHour + "/hour"
 		
-		let url = URL(string: workspace.imageUrl)!
+		let url = URL(string: space.imageUrl)!
 		URLSession.shared.dataTask(with: url) { (data, _, error) in
 			if let error = error {
 				print("error loading image: \(error)")
