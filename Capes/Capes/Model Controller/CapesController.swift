@@ -35,9 +35,9 @@ class CapeController {
 			
 			for i in 0..<workSpaces.count {
 				let dictionary = (workSpaces[i].data() as [String: Any])
-				
-//				let ws = self.createCityWorkSpaceListing(with: dictionary)
-//				workspaces.append(ws)
+				print(dictionary)
+				let space = Space(dict: dictionary)
+				spaces.append(space)
 				
 			}
 

@@ -56,9 +56,10 @@ class Space {
 		return [
 			"uuid": uuid,
 			"hostUuid":hostUuid,
-			"deks": desk,
+			"desk": desk,
 			"privateOffice": privateOffice,
-			"pricePerday": pricePerday,
+			"pricePerHour": pricePerHour,
+			"pricePerDay": pricePerday,
 			"workSpaceTitle": workSpaceTitle,
 			"imageUrl": imageUrl,
 			"bio": bio,
@@ -71,4 +72,27 @@ class Space {
 		
 	}
 	
+	convenience init(dict: [String: Any]) {
+		
+		let uuid = dict["uuid"] as! String
+		let hostUuid = dict["hostUuid"] as! String
+		let desk = dict["desk"] as! Bool
+		let privateOffice = dict["privateOffice"] as! Bool
+		let pricePerDay = dict["pricePerDay"] as! String
+		let pricePerHour = dict["pricePerHour"] as! String
+		let workSpaceTitle = dict["workSpaceTitle"] as! String
+		let imageUrl = dict["imageUrl"] as! String
+		let bio = dict["bio"] as! String
+		let address = dict["address"] as! String
+		let city = dict["city"] as! String
+		let state = dict["state"] as! String
+		let zipCode = dict["zipcode"] as! String
+		let companyName = dict["companyName"] as! String
+		
+		
+		self.init(uuid: uuid, hostUuid: hostUuid, desk: desk,
+				   privateOffice: privateOffice, pricePerHour: pricePerHour, pricePerDay: pricePerDay,
+				   workstationTitle: workSpaceTitle, imageUrl: imageUrl, bio: bio, address: address,
+				   city: city, state: state, zipcode: zipCode, companyName: companyName)
+	}
 }
