@@ -83,7 +83,6 @@ class SignUpViewController: UIViewController, CapeControllerProtocol {
 				print("error with fb Auth: \(error)")
 				self.errorLabel.isHidden = false
 				self.errorLabel?.text = "Error accurred. Please try again."
-				
 				return
 			} else {
 				self.saveToUserDefaults(with: email, password: password)
