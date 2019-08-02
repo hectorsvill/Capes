@@ -10,6 +10,7 @@ import UIKit
 import FirebaseAuth
 import Firebase
 
+
 class ProfileViewController: UIViewController, CapeControllerProtocol {
 	var capeController: CapeController?
 	let settings = ["edit bio", "edit image", "sign out"]
@@ -19,6 +20,7 @@ class ProfileViewController: UIViewController, CapeControllerProtocol {
 	@IBOutlet var bioTextView: UITextView!
 	@IBOutlet var nameLabel: UILabel!
 	@IBOutlet var emailLLabel: UILabel!
+	@IBOutlet var hostAWorkSpaceButton: UIButton!
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +36,7 @@ class ProfileViewController: UIViewController, CapeControllerProtocol {
 	}
 
 	func setupViews(){
+		hostAWorkSpaceButton.layer.cornerRadius = 20
 		guard let user = capeController?.currentUser else { return }
 		nameLabel.text = "\(user.fisrtName) \(user.lastName)"
 		emailLLabel.text = user.email
@@ -52,9 +55,6 @@ class ProfileViewController: UIViewController, CapeControllerProtocol {
 			vc.capeController = capeController
 		}
 	}
-	
-
-
 }
 
 
@@ -71,7 +71,6 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
 	}
 	
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-		
 		print("didSelect \(indexPath.row)")
 		if indexPath.row == 2{
 			signOut()
@@ -119,5 +118,7 @@ extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationCo
 		dismiss(animated: true)
 		
 		imageView.image = image
+		// Use firebase storage to store images.
+		
 	}
 }

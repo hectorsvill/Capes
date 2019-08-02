@@ -25,8 +25,14 @@ class HostWorspaceApplicationViewController: UIViewController, CapeControllerPro
 	@IBOutlet var zipcodeTextField: UITextField!
 	@IBOutlet var companyNameTextField: UITextField!
 	
+	@IBOutlet var submitButton: UIButton!
+	@IBOutlet var cancelButton: UIButton!
+	
+	
     override func viewDidLoad() {
         super.viewDidLoad()
+		submitButton.layer.cornerRadius = 15
+		cancelButton.layer.cornerRadius = 15
     }
 	
 	@IBAction func deskToggle(_ sender: Any) {

@@ -11,9 +11,9 @@
 		E8A05D0E22F023DA00B19C3D /* CapesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A05D0D22F023DA00B19C3D /* CapesController.swift */; };
 		E8B0295722F36EB1003AC0F8 /* HostWorspaceApplicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B0295622F36EB1003AC0F8 /* HostWorspaceApplicationViewController.swift */; };
 		E8B0295922F38CC4003AC0F8 /* Space.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B0295822F38CC4003AC0F8 /* Space.swift */; };
+		E8B0295B22F4A276003AC0F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8B0295A22F4A276003AC0F8 /* Assets.xcassets */; };
 		E8EBE58722EF5D4800B59FD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EBE58622EF5D4800B59FD3 /* AppDelegate.swift */; };
 		E8EBE58C22EF5D4800B59FD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8EBE58A22EF5D4800B59FD3 /* Main.storyboard */; };
-		E8EBE58E22EF5D4A00B59FD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8EBE58D22EF5D4A00B59FD3 /* Assets.xcassets */; };
 		E8EBE59122EF5D4A00B59FD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8EBE58F22EF5D4A00B59FD3 /* LaunchScreen.storyboard */; };
 		E8EBE59922EF5E1F00B59FD3 /* CapesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EBE59822EF5E1F00B59FD3 /* CapesViewController.swift */; };
 		E8EBE5BE22EF8DCD00B59FD3 /* SignUpLogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EBE5BD22EF8DCD00B59FD3 /* SignUpLogInViewController.swift */; };
@@ -38,10 +38,10 @@
 		E8A05D0D22F023DA00B19C3D /* CapesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapesController.swift; sourceTree = "<group>"; };
 		E8B0295622F36EB1003AC0F8 /* HostWorspaceApplicationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostWorspaceApplicationViewController.swift; sourceTree = "<group>"; };
 		E8B0295822F38CC4003AC0F8 /* Space.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Space.swift; sourceTree = "<group>"; };
+		E8B0295A22F4A276003AC0F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E8EBE58322EF5D4800B59FD3 /* Capes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Capes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8EBE58622EF5D4800B59FD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8EBE58B22EF5D4800B59FD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E8EBE58D22EF5D4A00B59FD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E8EBE59022EF5D4A00B59FD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E8EBE59222EF5D4A00B59FD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8EBE59822EF5E1F00B59FD3 /* CapesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapesViewController.swift; sourceTree = "<group>"; };
@@ -151,10 +151,10 @@
 			isa = PBXGroup;
 			children = (
 				E8EBE58A22EF5D4800B59FD3 /* Main.storyboard */,
-				E8EBE58D22EF5D4A00B59FD3 /* Assets.xcassets */,
 				E8EBE58F22EF5D4A00B59FD3 /* LaunchScreen.storyboard */,
 				E8EBE59222EF5D4A00B59FD3 /* Info.plist */,
 				E8F2640C22F0B8600074C4C3 /* GoogleService-Info.plist */,
+				E8B0295A22F4A276003AC0F8 /* Assets.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -254,7 +254,7 @@
 			files = (
 				E8EBE59122EF5D4A00B59FD3 /* LaunchScreen.storyboard in Resources */,
 				E8F2640D22F0B8600074C4C3 /* GoogleService-Info.plist in Resources */,
-				E8EBE58E22EF5D4A00B59FD3 /* Assets.xcassets in Resources */,
+				E8B0295B22F4A276003AC0F8 /* Assets.xcassets in Resources */,
 				E8EBE58C22EF5D4800B59FD3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

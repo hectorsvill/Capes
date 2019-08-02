@@ -358,6 +358,7 @@
                     <connections>
                         <outlet property="bioTextView" destination="AYZ-cD-RKU" id="4FD-2r-dz9"/>
                         <outlet property="emailLLabel" destination="GSB-41-gwo" id="iFZ-Gh-hES"/>
+                        <outlet property="hostAWorkSpaceButton" destination="ZAO-CX-MQD" id="psj-Em-dWY"/>
                         <outlet property="imageView" destination="oD6-9g-Jki" id="3HO-XC-TN0"/>
                         <outlet property="nameLabel" destination="ywr-1J-agA" id="Vhk-Kj-bXr"/>
                         <outlet property="tableView" destination="bjk-DR-Odt" id="luA-p8-9Ke"/>
@@ -633,6 +634,7 @@
                     <connections>
                         <outlet property="addressTextField" destination="vxM-4U-egm" id="dju-NE-2Bg"/>
                         <outlet property="bioTextView" destination="dAB-ME-Yr3" id="0ol-vP-DiO"/>
+                        <outlet property="cancelButton" destination="HZo-Zm-uTH" id="q6t-hn-ot7"/>
                         <outlet property="cityTextField" destination="LVy-JO-pvg" id="nY5-CV-iLt"/>
                         <outlet property="companyNameTextField" destination="BnU-LF-YrL" id="PJR-nR-wFH"/>
                         <outlet property="deskSwitch" destination="UeI-Xf-6Mp" id="EWM-UV-w9P"/>
@@ -641,6 +643,7 @@
                         <outlet property="pricePerHourTextField" destination="CPt-I9-dyY" id="i5g-Ra-wDA"/>
                         <outlet property="privatOficeSwitch" destination="Gdt-eK-Zi4" id="Eip-yD-Ctj"/>
                         <outlet property="stateTextField" destination="V6L-63-F6I" id="cVo-5m-Ca8"/>
+                        <outlet property="submitButton" destination="QWu-a6-dbq" id="jZp-XP-NqC"/>
                         <outlet property="workStationTitleTextTitle" destination="jSS-hK-caQ" id="RVB-J4-ipR"/>
                         <outlet property="zipcodeTextField" destination="8y0-jp-dcw" id="j06-jG-rly"/>
                     </connections>
@@ -718,7 +721,7 @@
             </objects>
             <point key="canvasLocation" x="4053.6231884057975" y="-1033.2589285714284"/>
         </scene>
-        <!--Workspaces-->
+        <!--Capes-->
         <scene sceneID="I5A-zY-Shm">
             <objects>
                 <tableViewController id="4p4-J1-YUy" customClass="WorkSpacesTableViewController" customModule="Capes" customModuleProvider="target" sceneMemberID="viewController">
@@ -792,7 +795,7 @@
                             <outlet property="delegate" destination="4p4-J1-YUy" id="zWV-yr-uf5"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Workspaces" id="iGr-3L-8b8"/>
+                    <tabBarItem key="tabBarItem" title="Capes" id="iGr-3L-8b8"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qvc-XP-Wn3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
