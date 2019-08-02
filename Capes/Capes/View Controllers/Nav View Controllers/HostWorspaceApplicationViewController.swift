@@ -104,7 +104,7 @@ class HostWorspaceApplicationViewController: UIViewController, CapeControllerPro
 		pricePerHourTextField?.text = "4"
 		pricePerDayTextField?.text = "50"
 		workStationTitleTextTitle?.text = "Old Pasadena"
-		imageUrlTextField?.text = "http://www.pasadenaviews.com/wp-content/uploads/2015/03/IMG_3351.jpg"
+		imageUrlTextField?.text = "https://www.pasadenaviews.com/wp-content/uploads/2015/03/IMG_3351.jpg"
 		bioTextView?.text = "With more restaurants per capita than NYC, Pasadena has more than enough eating & drinking options to satisfy your inner foodie. The building is situated in the heart of Old Town Pasadena, across the street from the Metro Gold Line, with monthly parking options, and free guest parking minutes away by foot. Shared offices at this location have unobstructed views of the San Gabriel mountains while the shared coworking workspace is filled with skylights. With a vibrant, barista serviced bar and lobby reception, you can host business meetings efficiently and in style. The member community at this office space is highly diverse, with traditional industries, technology and some astronomers and rocket scientists sprinkled in. This coworking space is perfect for east-siders who want a transit-oriented, eclectic workspace surrounded by great amenities."
 		addressTextField?.text = "87 N Raymond Ave"
 		stateTextField?.text = "CA"

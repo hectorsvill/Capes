@@ -19,6 +19,7 @@ class WorkSpaceDetailViewController: UIViewController {
 	@IBOutlet var pricePerHourLabel: UILabel!
 	@IBOutlet var pricePerDayLabel: UILabel!
 	
+	@IBOutlet var hostImageView: UIImageView!
 	@IBOutlet var hostLabel: UILabel!
 	@IBOutlet var cityLabel: UILabel!
 	@IBOutlet var bioTextField: UITextView!
@@ -71,6 +72,7 @@ class WorkSpaceDetailViewController: UIViewController {
 			guard let data = data else { return }
 			DispatchQueue.main.async {
 				self.imageView.image = UIImage(data: data)
+				self.hostImageView.image = UIImage(data: data)
 			}
 			}.resume()
 	}

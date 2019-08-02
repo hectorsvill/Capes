@@ -43,7 +43,9 @@ class SignUpViewController: UIViewController, CapeControllerProtocol {
 	}
 	
 	@IBAction func cancelButtonPressed(_ sender: Any) {
+		print("cancel")
 		navigationController?.popViewController(animated: true)
+//		dismiss(animated: true, completion: nil)
 	}
 	
 	

@@ -960,6 +960,7 @@
                         <outlet property="addressTextField" destination="B6F-cS-FKM" id="oJg-Wd-NCc"/>
                         <outlet property="bioTextField" destination="5lk-pP-tLP" id="tHk-2Q-Gga"/>
                         <outlet property="cityLabel" destination="nII-Ww-Ky2" id="VZK-Tt-o0h"/>
+                        <outlet property="hostImageView" destination="kHp-mf-8nm" id="E3A-Jp-qcP"/>
                         <outlet property="hostLabel" destination="Da8-jf-XSP" id="MTo-i6-c5H"/>
                         <outlet property="imageView" destination="u8P-W0-Yqg" id="G7r-Ua-844"/>
                         <outlet property="mapView" destination="HAY-wW-6hr" id="70M-Pa-RMm"/>

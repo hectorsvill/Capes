@@ -88,7 +88,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
 	
 	private func signOut() {
 		
-		let ac = UIAlertController(title: "sign Out?", message: nil, preferredStyle: .actionSheet)
+		let ac = UIAlertController(title: "sign out?", message: nil, preferredStyle: .actionSheet)
 		ac.addAction(UIAlertAction(title: "cancel", style: .cancel))
 		ac.addAction(UIAlertAction(title: "ok", style: .default, handler: { (action) in
 			
