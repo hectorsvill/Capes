@@ -90,7 +90,9 @@ extension CapeController {
 				if email == emailString {
 					let firstNameString = dictionary["firstName"] as! String
 					let lastNameString = dictionary["lastName"] as! String
-					self.currentUser = User(fisrtName: firstNameString, lastName: lastNameString, email: email)
+					let uuid = dictionary["uuid"] as! String
+					let bio = dictionary["bio"] as! String
+					self.currentUser = User(fisrtName: firstNameString, lastName: lastNameString, email: email, companyName: nil, addrees: nil, city: nil, state: nil, zipCode: nil, bio: bio, uuid: uuid)
 				}
 			}
 			

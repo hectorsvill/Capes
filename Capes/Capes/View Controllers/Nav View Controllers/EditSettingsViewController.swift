@@ -21,12 +21,17 @@ class EditSettingsViewController: UIViewController, CapeControllerProtocol {
 	
 	@IBAction func saveButtonPressed(_ sender: Any) {
 		// send data to firebase
-		guard let bio = bioTextView.text?.trimmingCharacters(in: .whitespaces) else { return }
+		guard let bio = bioTextView.text?.trimmingCharacters(in: .whitespaces),
+			let user = capeController?.currentUser	else { return }
+		
 		capeController?.currentUser?.bio = bio
 	
-		//let user = capeController?.currentUser
-		//update user in fb
-		
+		FireStoreReferenceManager.db.collection("users").document(user.uuid).updateData(["bio": bio]){ error in
+			if let error = error {
+				print("Error updating user data: \(error)")
+			}
+			
+		}
 
 		dismiss(animated: true, completion: nil)
 	}
