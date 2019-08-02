@@ -61,6 +61,11 @@ class HostWorspaceApplicationViewController: UIViewController, CapeControllerPro
 		// send to firestore
 		
 		capeController?.createAWorkSpaceWith(dictionary: workspace.getDictionary())
+		let alertController = UIAlertController(title: "Your Workspace Will Be Listed", message: nil, preferredStyle: .actionSheet)
+		alertController.addAction(UIAlertAction(title: "OK", style: .cancel){ action in
+			self.dismiss(animated: true)
+		})
+		present(alertController, animated: true)
 	}
 	
 	private func validatefields() -> String? {

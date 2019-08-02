@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import FirebaseAuth
+import Firebase
 
 class ProfileViewController: UIViewController, CapeControllerProtocol {
 	var capeController: CapeController?
-	let settings = ["edit bio", "edit image", "host a workspace"]
+	let settings = ["edit bio", "edit image", "sign out"]
 	
 	@IBOutlet var tableView: UITableView!
 	@IBOutlet var imageView: UIImageView!
@@ -67,4 +69,36 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
 		cell.textLabel?.text = settings[indexPath.row]
 		return cell
 	}
+	
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		
+		print("didSelect \(indexPath.row)")
+		if indexPath.row == 2{
+			signOut()
+		}else if indexPath.row == 1{
+			//editImage
+		}
+	}
+	
+	private func signOut() {
+		
+		let ac = UIAlertController(title: "Log Out?", message: nil, preferredStyle: .actionSheet)
+		ac.addAction(UIAlertAction(title: "cancel", style: .cancel))
+		ac.addAction(UIAlertAction(title: "ok", style: .default, handler: { (action) in
+			
+			try? Auth.auth().signOut()
+			self.goToMainView()
+		}))
+		present(ac, animated: true)
+	}
+	
+	private func goToMainView() {
+		guard let homeVC = storyboard?.instantiateViewController(withIdentifier: "SignInSignUPVC") as? SignUpLogInViewController else {
+			print("homeVC was not found!")
+			return
+		}
+		view.window?.rootViewController = homeVC
+		view.window?.makeKeyAndVisible()
+	}
+	
 }
