@@ -9,8 +9,10 @@
 import UIKit
 import FirebaseAuth
 import Firebase
+import GoogleSignIn
 
-class SignUpLogInViewController: UIViewController {
+
+class SignUpLogInViewController: UIViewController, GIDSignInUIDelegate {
 	let capecontroller = CapeController()
 	
 	@IBOutlet var signUpButton: UIButton!
@@ -19,7 +21,11 @@ class SignUpLogInViewController: UIViewController {
 	override func viewDidLoad() {
         super.viewDidLoad()
 		styleButtons()
+		
+		GIDSignIn.sharedInstance().uiDelegate = self
+//		GIDSignIn.sharedInstance().signIn()
     }
+	
 	
 	func styleButtons() {
 		signUpButton.layer.cornerRadius = 1
@@ -32,6 +38,7 @@ class SignUpLogInViewController: UIViewController {
 			print("homeVC was not found!")
 			return
 		}
+		
 		view.window?.rootViewController = homeVC
 		view.window?.makeKeyAndVisible()
 	}
